@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* CSS Document */
+@font-face{
+  font-family:fontin;
+  font-weight:bold;
+  src:url(../fonts/fontin_bold.ttf); 
+  format('ttf');
+}
+@font-face{
+  font-family:fontin;
+  font-weight:normal;
+  src:url(../fonts/fontin_regular.ttf); 
+  format('ttf');
+}
+@font-face{
+  font-family:deftone;
+  font-weight:bold;
+  src:url(../fonts/deftone.ttf); 
+  format('ttf');
+}
+@font-face{
+  font-family:diavlo_book;
+  font-weight:bold;
+  src:url(../fonts/diavlo_book.otf); 
+  format('otf');
+}
+@font-face{
+  font-family:storybook;
+  font-weight:bold;
+  src:url(../fonts/storyboo.TTF);
+  format('ttf');
+}

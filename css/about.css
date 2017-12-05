@@ -1,0 +1,10 @@
+@charset "utf-8";
+/* CSS Document */
+
+#about{text-decoration:none;
+       background-color:#F90;
+       border-radius:10px;
+       -moz-border-radius:10px;
+       -webkit-border-radius:10px;
+       -o-border-radius:10px;
+}

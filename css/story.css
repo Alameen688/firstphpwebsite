@@ -1,0 +1,2348 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	font: 100%/1.4 verdana,helvetica,arial,sans-serif;
+	background:#F6F4F0;
+	margin: 0;
+	padding: 0;
+	color: #000;
+	background-attachment:fixed; 
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;
+	padding-right: 15px;
+	padding-left: 15px; 
+}
+ul, ol, dl {
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+a img {
+	border: none;
+}
+
+/* ~~ This fixed width container surrounds all other divs ~~ */
+.container {
+	width: 1250px;
+	font-size:16px;
+	color:#404040;
+    background-color:#F6F4F0;
+	margin: 0 auto;
+	background-attachment:fixed; 
+	zoom:1;
+}
+.header {
+	background:#666;
+	padding-top:5px;
+	padding-bottom:2px;
+	padding-left:5px;
+}
+
+/* ~~ These are the columns for the layout. ~~ 
+
+1) Padding is only placed on the top and/or bottom of the divs. The elements within these divs have padding on their sides. This saves you from any "box model math". Keep in mind, if you add any side padding or border to the div itself, it will be added to the width you define to create the *total* width. You may also choose to remove the padding on the element in the div and place a second div within it with no width and the padding necessary for your design.
+
+2) No margin has been given to the columns since they are all floated. If you must add margin, avoid placing it on the side you're floating toward (for example: a right margin on a div set to float right). Many times, padding can be used instead. For divs where this rule must be broken, you should add a "display:inline" declaration to the div's rule to tame a bug where some versions of Internet Explorer double the margin.
+
+3) Since classes can be used multiple times in a document (and an element can also have multiple classes applied), the columns have been assigned class names instead of IDs. For example, two sidebar divs could be stacked if necessary. These can very easily be changed to IDs if that's your preference, as long as you'll only be using them once per document.
+
+4) If you prefer your nav on the right instead of the left, simply float these columns the opposite direction (all right instead of all left) and they'll render in reverse order. There's no need to move the divs around in the HTML source.
+
+*/
+.sidebar1 {
+	float: left;
+	width: 200px;
+	background:#F6F4F0;/*#cccccc*/
+	padding-bottom: 10px;
+	color:#F5821F;
+	margin-top:22px;
+	margin-right:10px;
+}
+.content {padding: 10px 0;
+	width: 700px;
+	float: left;
+}
+.sidebar2 {
+	float: left;
+	width: 300px;
+	padding: 10px;
+	background-color:#F6F4F0; /*#cccccc*/
+	margin-top:17px;
+	margin-left:4px;
+}
+#topstories{ width:150px;
+             height:50px;
+	         background-color:#A4A6A9;
+			 font-weight:bold;
+			 font-size:30px;
+			 text-shadow:#B01116;
+			 color:#FFF0A5;
+			 font-family:'deftone', Helvetica, sans-serif;
+			 letter-spacing:2px;
+}
+#topic{ color:#C30075;
+}
+.nav{background-color:#D4D4D4; /* makes it darker*/
+}
+.nav li:hover,.nav li:active{
+   background-image:-webkit-gradient(linear, left top, right top, from(rgba(168,168,168,0.5)),color-stop(0.5,rgba(168,168,168,0)), to(rgba(168,168,168,0.5)));
+	background-image:-moz-linear-gradient(left, rgba(168,168,168,0.5), rgba(168,168,168,0) 50%, rgba(168,168,168,0.5));
+	background-image:-o-linear-gradient(left, rgba(168,168,168,0.5), rgba(168,168,168,0) 50%, rgba(168,168,168,0.5));
+	background-image:-ms-linear-gradient(left, rgba(168,168,168,0.5), rgba(168,168,168,0) 50%, rgba(168,168,168,0.5));
+	background-image:linear-gradient(left, rgba(168,168,168,0.5), rgba(168,168,168,0) 50%, rgba(168,168,168,0.5));
+
+	}
+ul.nav a{ text-decoration:none;
+        list-style:none;
+		text-align:center;
+		font-size:22px;
+		color:#404040;
+		font-family: 'fontin',Verdana, Geneva, sans-serif;
+}
+ul.nav a:hover,ul.nav a:active{
+	color:#ffab00;
+	}
+ul.nav {
+		text-align:center;
+		list-style:none;
+}
+
+ul.nav li{ background-color:whitesmoke;background-image:-moz-linear-gradient(top,white,#e6e6e6);background-image:-webkit-gradient(linear,0 0,0 100%,from(white),to(#e6e6e6));background-image:-webkit-linear-gradient(top,white,#e6e6e6);background-image:-o-linear-gradient(top,white,#e6e6e6);background-image:linear-gradient(to bottom,white,#e6e6e6);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff',endColorstr='#ffe6e6e6',GradientType=0);border-color:#e6e6e6 #e6e6e6 silver;border-color:rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);*background-color:#e6e6e6;filter:progid:DXImageTransform.Microsoft.gradient(enabled = false);border:1px solid #ccc;
+border-bottom: 1px solid #fff;
+           padding:20px
+}
+
+/* The navigation list styles (can be removed if you choose to use a premade flyout menu like Spry)
+ul.nav {
+	list-style: none; // this removes the list marker 
+	margin-bottom: 15px; //this creates the space between the navigation on the content below 
+	
+}
+ul.nav li {    padding:10px;
+	          border-bottom: 1px solid #F6F4F0; //this creates the button separation 
+}
+ul.nav a, ul.nav a:visited {
+	display: block;
+	text-decoration: none;
+	background:#cccccc;
+	color:#FF3;
+	font-family:'storybook',helvetica,arial,sans-serif;
+	text-align:center;
+	font-weight:bold;
+	
+}
+ul.nav a:hover, ul.nav a:active, ul.nav a:focus { // this changes the background and text color for both mouse and keyboard navigators
+	background: #FFF0A5;
+	color: #8E2800;
+}
+*/
+/* ~~ The footer styles ~~ */
+.footer {
+	padding: 10px 0;
+	background:#F6F4F0;
+	position: relative;/* this gives IE6 hasLayout to properly clear */
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+	 border-radius:10px;
+	-moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -o-border-radius:10px;
+}
+#related {width:900px;
+height:220px;
+border:1px solid #FFF;
+margin-top:20px;
+padding:15px;
+background-color:#FFF;
+-moz-border-radius:10px;
+-webkit-border-radius:10px;
+-o-border-radius:10px;
+border-radius:10px;
+box-shadow: 0px 0px 20px 3px #d3d3d3;
+
+}
+#recent_post { width:900px;
+            background-color:#ffcfcc;
+            color:#666; /*#FFF0A5*/
+            -moz-border-radius:10px;
+            -webkit-border-radius:10px;
+            -o-border-radius:10px;
+            border-radius:10px;
+			font-family:'fontin', Arial, Helvetica, sans-serif;
+            font-size:20px;
+			text-align:center;
+}
+div.imgnav {margin:5px;
+            padding:5px;
+			height:auto;
+			width:150px;
+			text-align:center;
+			background-color:#FFF;
+			-moz-border-radius:10px;
+            -webkit-border-radius:10px;
+            -o-border-radius:10px;
+            border-radius:10px;
+			float:left;
+			
+			}
+.imgnav:hover,.imgnav:active{ border: 1px solid #f58220;
+	}			
+div.imgnav img{display:inline;
+               margin:5px;
+			   width:140px;
+			   height:110px;
+			   }
+div.desc {color:#C30075;
+          background-color:#FFF;
+		  font-family:'diavlo_book',helvetica,arial,sans-serif;
+		  }	
+.s-button,
+.s-button:hover {
+position: relative;
+max-width: 100%;
+color: #ffffff;
+font-size: 15px;
+line-height: 1;
+padding: 5px;
+border-top-width: 1px;
+border-style: solid;
+display: inline-block;
+margin: 5px;
+font-weight: bold;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+border-radius: 10px;
+-webkit-box-shadow: 0 0 5px rgba(0,0,0,0.3);
+-moz-box-shadow: 0 0 5px rgba(0,0,0,0.3);
+box-shadow:  0 0 5px rgba(0,0,0,0.3);
+}
+/* Red Button */
+.s-button.red {
+border: 1px solid #76151a;
+background-color: #93063b;
+background-image: -moz-linear-gradient(#b03238, #93063b);
+background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#b03238), to(#93063b));
+background-image: -webkit-linear-gradient(#b03238, #93063b);
+background-image: -o-linear-gradient(#b03238, #93063b);
+background-image: -ms-linear-gradient(#b03238, #93063b);
+-pie-background: linear-gradient(#b03238, #93063b);
+}
+#storyplatform { background-color:#FFF;
+                 border: 1px thin;
+                 box-shadow: 0px 0px 20px 3px #d3d3d3;
+		         border-radius:10px;
+	             -moz-border-radius:10px;
+                 -webkit-border-radius:10px;
+                 -o-border-radius:10px;
+				 padding:5px;
+				 margin:10px;
+				
+}
+#storyplatform img{ border:1px solid #FFF;
+             padding:5px 25px;
+			 background-color:#cccccc;
+			 margin-left:10px;
+} 
+#error{ color:#F00;
+	}
+.brief{ clear:both;
+}
+#subscribe{ font-family:'storybook', Helvetica, sans-serif;
+            font-size: 15px;
+			color:#f58220;
+}
+.bl_form input {padding-top: 15px;
+      background: rgba(255,255,255,0.10);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      border: none;
+      color:#C30075;
+      padding: 5px 15px;
+      border-radius: 25px;
+      font-size: 16px;
+      outline: none;
+	  width:200px;
+      border:1px solid #999999;
+      margin-bottom:10px;
+}
+motive { font-family: 'storybook', Verdana, Geneva;
+         color:#f58220;
+	}
+.box_right{float:right;
+           text-align:center;
+		   margin-top:20px;
+}	
+#search { font-family: 'storybook', Verdana, Geneva;
+          color:#f58220;	
+}
+.search_input { border:1px solid #999999;
+          border-radius: 10px;
+         -moz-border-radius: 10px;
+         -webkit-border-radius: 10px;
+		  color:#C30075;
+		  padding:5px;
+		  font-family:'fontin', Helvetica, sans-serif;
+		  background-color:#F6F4F0;
+		   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+/* initial #F6F4F0,#FFF0A5 nice color #f58220 lighter #ffab00*/
+/* @media rule for different device width*/
+@media screen and (max-width:349px) and (min-width:200px) {
+ .body{
+		width:100%;
+	}
+.container {
+	width:320px;
+	}
+.content{
+		float:none;
+		width:320px;
+		margin-top:180px;
+		margin-left:-2px;
+	}
+.storyplatform { border-bottom:1px solid #FFF;
+         margin:5px;
+		 box-shadow:none;
+		 border-radius:0px;
+	     -moz-border-radius:0px;
+         -webkit-border-radius:0px;
+         -o-border-radius:0px;
+        }	
+.sidebar1 {width :200px;
+		   margin-top:10px;
+		   margin-left:30px;
+}
+.sidebar1 li{ float:left;
+}
+ul.nav li{ padding:1px 20px 1px 20px;
+           width:180px;
+		   border-bottom:none;
+		   border-radius:30px 5px 30px 5px;
+	     -moz-border-radius:30px 5px 30px 5px;
+         -webkit-border-radius:30px 5px 30px 5px;
+         -o-border-radius:30px 5px 30px 5px;
+          
+}
+.sidebar2 { float:left;
+	        width: 280px;
+	        padding: 12px 2px 5px 5px;
+			margin-left:10px;
+}
+div.imgnav { background-color:#F6F4F0;
+			}
+		   
+div.desc { background-color:#F6F4F0;
+		  }	
+.box_right { width:280px;
+             float:none;
+			 margin-left:10px;
+}
+#search{ margin-left:-20px;
+	}
+.search_input { width:180px;
+		        padding:5px;
+}
+.bl_form input {padding-top: 15px;
+                padding: 5px 20px;
+	            width:180px;
+				margin-left:10px;
+      }	
+	  
+.ads img{ width:200px;
+	}	  	  
+#cv-sticky{display:none;
+}
+#storyplatform img{ padding:0px;
+             width:270px;
+			 background-color:#F6F4F0;
+			 margin-left:4px;
+			 
+}
+#related {width:280px;
+height:inherit;
+border:none;
+margin-top:20px;
+margin-left:-5px;
+padding:15px;
+background-color:#F6F4F0;
+-moz-border-radius:0px;
+-webkit-border-radius:0px;
+-o-border-radius:0px;
+border-radius:0px;
+box-shadow:none;
+float:left;
+display:block;
+} 
+#recent_post { width:280px;
+            background-color:#ffcfcc;
+            color:#666;
+            -moz-border-radius:10px;
+            -webkit-border-radius:10px;
+            -o-border-radius:10px;
+            border-radius:10px;
+			font-family:'fontin', Arial, Helvetica, sans-serif;
+            font-size:20px;
+			text-align:center;
+			margin-bottom:40px;
+}
+.header {
+	background:#666;
+	padding-top:5px;
+	padding-bottom:2px;
+	padding-left:5px;
+	width:300px;
+	margin-left:2px;
+}
+.footer {
+	padding: 10px 0;
+	background:#F6F4F0;
+	position: relative;/* this gives IE6 hasLayout to properly clear */
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+	 border-radius:10px;
+	-moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -o-border-radius:10px;
+	width:300px;
+}		
+}
+@media screen and (max-width:409px)and (min-width: 350px) {
+.body{
+		width:100%;
+	}
+.container {
+	width:330px;
+	}
+.content{
+		float:none;
+		width:330px;
+		margin-top:180px;
+		margin-left:-2px;
+	}
+.clayer { border-bottom:1px solid #FFF;
+         margin:5px;
+		 box-shadow:none;
+		 border-radius:0px;
+	     -moz-border-radius:0px;
+         -webkit-border-radius:0px;
+         -o-border-radius:0px;
+        }	
+.sidebar1 {width :270px;
+		   margin-top:10px;
+		   margin-left:20px;
+}
+.sidebar1 li{ float:left;
+}
+ul.nav li{ padding:1px 30px 1px 30px;
+           width:200px;
+		   border-bottom:none;
+		   border-radius:30px 5px 30px 5px;
+	     -moz-border-radius:30px 5px 30px 5px;
+         -webkit-border-radius:30px 5px 30px 5px;
+         -o-border-radius:30px 5px 30px 5px;
+          
+}
+.sidebar2 { float:left;
+	        width: 310px;
+	        padding: 12px 2px 5px 5px;
+			margin-left:10px;
+}
+div.imgnav { background-color:#F6F4F0;
+			}
+		   
+div.desc { background-color:#F6F4F0;
+		  }	
+.box_right { width:280px;
+             float:none;
+			 margin-left:10px;
+}
+#search{ margin-left:-20px;
+	}
+.search_input { width:200px;
+		        padding:5px;
+}
+.bl_form input {padding-top: 15px;
+                padding: 5px 20px;
+	            width:180px;
+				margin-left:20px;
+      }	
+	  
+.ads img{ width:200px;
+	}	  	  
+#cv-sticky{display:none;
+}
+#storyplatform img{ padding:0px;
+             width:300px;
+			 background-color:#F6F4F0;
+			 margin-left:-2px;
+			 
+}
+#related {width:300px;
+height:inherit;
+border:none;
+margin-top:20px;
+margin-left:-5px;
+padding:15px;
+background-color:#F6F4F0;
+-moz-border-radius:0px;
+-webkit-border-radius:0px;
+-o-border-radius:0px;
+border-radius:0px;
+box-shadow:none;
+float:left;
+display:block;
+} 
+#recent_post { width:280px;
+            background-color:#ffcfcc;
+            color:#666;
+            -moz-border-radius:10px;
+            -webkit-border-radius:10px;
+            -o-border-radius:10px;
+            border-radius:10px;
+			font-family:'fontin', Arial, Helvetica, sans-serif;
+            font-size:20px;
+			text-align:center;
+			margin-bottom:40px;
+}
+.header {
+	background:#666;
+	padding-top:5px;
+	padding-bottom:2px;
+	padding-left:5px;
+	width:320px;
+	margin-left:5px;
+}
+.footer {
+	padding: 10px 0;
+	background:#F6F4F0;
+	position: relative;/* this gives IE6 hasLayout to properly clear */
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+	 border-radius:10px;
+	-moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -o-border-radius:10px;
+	width:320px;
+}		
+}
+@media screen and (max-width:449px)and (min-width: 410px) {
+   .body{
+		width:100%;
+	}
+.container {
+	width:390px;
+	}
+.content{
+		float:none;
+		width:380px;
+		margin-top:180px;
+		margin-left:-2px;
+	}
+.clayer { border-bottom:1px solid #FFF;
+         margin:5px;
+		 box-shadow:none;
+		 border-radius:0px;
+	     -moz-border-radius:0px;
+         -webkit-border-radius:0px;
+         -o-border-radius:0px;
+        }	
+.sidebar1 {width :270px;
+		   margin-top:10px;
+		   margin-left:50px;
+}
+.sidebar1 li{ float:left;
+}
+ul.nav li{ padding:1px 30px 1px 30px;
+           width:200px;
+		   border-bottom:none;
+		   border-radius:30px 5px 30px 5px;
+	     -moz-border-radius:30px 5px 30px 5px;
+         -webkit-border-radius:30px 5px 30px 5px;
+         -o-border-radius:30px 5px 30px 5px;
+          
+}
+.sidebar2 { float:left;
+	        width: 350px;
+	        padding: 12px 2px 5px 5px;
+			margin-left:10px;
+}
+div.imgnav { background-color:#F6F4F0;
+			}
+		   
+div.desc { background-color:#F6F4F0;
+		  }	
+.box_right { width:320px;
+             float:none;
+			 margin-left:10px;
+}
+#search{ margin-left:-20px;
+	}
+.search_input { width:200px;
+		        padding:5px;
+}
+.bl_form input {padding-top: 15px;
+                padding: 5px 20px;
+	            width:200px;
+				margin-left:20px;
+      }	
+	  
+.ads img{ width:200px;
+	}	  	  
+#cv-sticky{display:none;
+}
+#storyplatform img{ padding:0px;
+             width:330px;
+			 background-color:#F6F4F0;
+			 margin-left:5px;
+			 
+}
+#related {width:340px;
+height:inherit;
+border:none;
+margin-top:20px;
+margin-left:-5px;
+padding:15px;
+background-color:#F6F4F0;
+-moz-border-radius:0px;
+-webkit-border-radius:0px;
+-o-border-radius:0px;
+border-radius:0px;
+box-shadow:none;
+float:left;
+display:block;
+} 
+#recent_post { width:280px;
+            background-color:#ffcfcc;
+            color:#666;
+            -moz-border-radius:10px;
+            -webkit-border-radius:10px;
+            -o-border-radius:10px;
+            border-radius:10px;
+			font-family:'fontin', Arial, Helvetica, sans-serif;
+            font-size:20px;
+			text-align:center;
+			margin-bottom:40px;
+}
+.header {
+	background:#666;
+	padding-top:5px;
+	padding-bottom:2px;
+	padding-left:5px;
+	width:360px;
+	margin-left:5px;
+}
+.footer {
+	padding: 10px 0;
+	background:#F6F4F0;
+	position: relative;/* this gives IE6 hasLayout to properly clear */
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+	 border-radius:10px;
+	-moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -o-border-radius:10px;
+	width:360px;
+}		
+}
+@media screen and (max-width:539px)and (min-width: 450px) {
+.body{
+		width:100%;
+	}
+.container {
+	width:430px;
+	}
+.content{
+		float:none;
+		width:430px;
+		margin-top:190px;
+		margin-left:0px;
+	}
+.clayer { border-bottom:1px solid #FFF;
+         margin:5px;
+		 box-shadow:none;
+		 border-radius:0px;
+	     -moz-border-radius:0px;
+         -webkit-border-radius:0px;
+         -o-border-radius:0px;
+        }	
+.sidebar1 {width :280px;
+		   margin-top:10px;
+	      margin-left:70px;
+}
+.sidebar1 li{ float:left;
+}
+ul.nav li{  padding:1px 30px 1px 30px;
+           width:200px;
+		   border-bottom:none;
+		   border-radius:30px 5px 30px 5px;
+	     -moz-border-radius:30px 5px 30px 5px;
+         -webkit-border-radius:30px 5px 30px 5px;
+         -o-border-radius:30px 5px 30px 5px;
+         
+}
+.sidebar2 { float:left;
+	        width: 380px;
+	        padding: 12px 2px 5px 5px;
+			margin-left:10px;
+}
+div.imgnav { background-color:#F6F4F0;
+			}
+		   
+div.desc { background-color:#F6F4F0;
+		  }	
+.box_right { width:400px;
+             float:none;
+			 margin-left:10px;
+}
+#search{ margin-left:-20px;
+	}
+.search_input { width:230px;
+		        padding:5px;
+}
+.bl_form input {padding-top: 15px;
+                padding: 5px 20px;
+	            width:220px;
+				margin-left:20px;
+      }	
+.ads img{ width:300px;
+	}	  	  
+#cv-sticky{display:none;
+}
+#storyplatform img{ padding:0px;
+             width:360px;
+			 background-color:#F6F4F0;
+			 margin-left:15px;
+			 
+}
+#related {width:400px;
+height:inherit;
+border:none;
+margin-top:20px;
+margin-left:0px;
+padding:15px;
+background-color:#F6F4F0;
+-moz-border-radius:0px;
+-webkit-border-radius:0px;
+-o-border-radius:0px;
+border-radius:0px;
+box-shadow:none;
+float:left;
+display:block;
+} 
+#recent_post { width:300px;
+            background-color:#ffcfcc;
+            color:#666;
+            -moz-border-radius:10px;
+            -webkit-border-radius:10px;
+            -o-border-radius:10px;
+            border-radius:10px;
+			font-family:'fontin', Arial, Helvetica, sans-serif;
+            font-size:20px;
+			text-align:center;
+			margin-bottom:40px;
+}
+.header {
+	background:#666;
+	padding-top:5px;
+	padding-bottom:2px;
+	padding-left:5px;
+	width:420px;
+	margin-left:5px;
+}
+.footer {
+	padding: 10px 0;
+	background:#F6F4F0;
+	position: relative;/* this gives IE6 hasLayout to properly clear */
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+	 border-radius:10px;
+	-moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -o-border-radius:10px;
+	width:400px;
+}	
+}
+@media screen and (max-width:610px)and (min-width: 540px) {
+	.body{
+		width:100%;
+	}
+.container {
+	width:510px;
+	}
+.content{
+		float:none;
+		width:520px;
+		margin-top:45px;
+		margin-left:-5px;
+		margin-right:0px;
+	}
+.sidebar1 {width :440px;
+		   margin-top:5px;
+		   margin-left:40px;
+}
+.sidebar1 li{ float:left;
+}
+ul.nav li{ padding:5px 5px 5px 5px;
+          
+}
+.sidebar2 { float:left;
+	        width: 360px;
+	        padding: 12px 2px 5px 5px;
+			margin-left:30px;
+}
+div.imgnav { background-color:#F6F4F0;
+			}
+		   
+div.desc { background-color:#F6F4F0;
+		  }	
+.box_right { width:400px;
+             float:none;
+			 margin-left:10px;
+}
+#search{ margin-left:-20px;
+	}
+.search_input { width:230px;
+		        padding:5px;
+}
+.bl_form input {padding-top: 15px;
+                padding: 5px 20px;
+	            width:220px;
+      }		  
+#cv-sticky{display:none;
+}
+#storyplatform img{ padding:0px;
+             width:420px;
+			 background-color:#F6F4F0;
+			 margin-left:25px;
+			 
+}
+#related {width:400px;
+height:inherit;
+border:none;
+margin-top:20px;
+margin-left:40px;
+padding:15px;
+background-color:#F6F4F0;
+-moz-border-radius:0px;
+-webkit-border-radius:0px;
+-o-border-radius:0px;
+border-radius:0px;
+box-shadow:none;
+float:left;
+display:block;
+} 
+#recent_post { width:400px;
+            background-color:#ffcfcc;
+            color:#666;
+            -moz-border-radius:10px;
+            -webkit-border-radius:10px;
+            -o-border-radius:10px;
+            border-radius:10px;
+			font-family:'fontin', Arial, Helvetica, sans-serif;
+            font-size:20px;
+			text-align:center;
+			margin-bottom:40px;
+}
+.header {
+	background:#666;
+	padding-top:5px;
+	padding-bottom:2px;
+	padding-left:5px;
+	width:500px;
+	margin-left:-5px;
+}
+.footer {
+	padding: 10px 0;
+	background:#F6F4F0;
+	position: relative;/* this gives IE6 hasLayout to properly clear */
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+	 border-radius:10px;
+	-moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -o-border-radius:10px;
+	width:500px;
+}	
+}
+@media screen and (max-width:699px)and (min-width: 609px) {
+.body{
+		width:100%;
+	}
+.container {
+	width:590px;
+	}
+.content{
+		float:none;
+		width:560px;
+		margin-top:70px;
+		margin-left:-5px;
+		margin-right:0px;
+	}
+.sidebar1 {width :500px;
+		   margin-top:10px;
+		   margin-left:40px;
+}
+.sidebar1 li{ float:left;
+}
+ul.nav li{ padding:10px 10px 10px 10px;
+}
+.sidebar2 { float:left;
+	        width: 500px;
+	        padding: 12px 2px 5px 5px;
+			margin-left:80px;
+}
+div.imgnav { background-color:#F6F4F0;
+			}
+		   
+div.desc { background-color:#F6F4F0;
+		  }	
+.box_right { width:400px;
+             float:none;
+			 margin-left:10px;
+}
+#search{ margin-left:-50px;
+	}
+.search_input { width:300px;
+		        padding:5px;
+}
+.bl_form input {padding-top: 15px;
+                padding: 5px 20px;
+	            width:250px;
+      }		  
+#cv-sticky{display:none;
+}
+#storyplatform img{ padding:0px;
+             width:480px;
+			 background-color:#F6F4F0;
+			 margin-left:15px;
+			 
+}
+#related {width:500px;
+height:inherit;
+border:none;
+margin-top:20px;
+margin-left:40px;
+padding:15px;
+background-color:#F6F4F0;
+-moz-border-radius:0px;
+-webkit-border-radius:0px;
+-o-border-radius:0px;
+border-radius:0px;
+box-shadow:none;
+float:left;
+display:block;
+} 
+#recent_post { width:400px;
+            background-color:#ffcfcc;
+            color:#666;
+            -moz-border-radius:10px;
+            -webkit-border-radius:10px;
+            -o-border-radius:10px;
+            border-radius:10px;
+			font-family:'fontin', Arial, Helvetica, sans-serif;
+            font-size:20px;
+			text-align:center;
+			margin-bottom:40px;
+}
+.header {
+	background:#666;
+	padding-top:5px;
+	padding-bottom:2px;
+	padding-left:5px;
+	width:550px;
+	margin-left:2px;
+}
+.footer {
+	padding: 10px 0;
+	background:#F6F4F0;
+	position: relative;/* this gives IE6 hasLayout to properly clear */
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+	 border-radius:10px;
+	-moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -o-border-radius:10px;
+	width:500px;
+}	
+	
+}
+@media screen and (max-width:779px)and (min-width: 700px) {
+  .body{
+		width:700px;
+	}
+.container {
+	width: 680px;
+	}
+.content{
+		float:none;
+		width:670px;
+		margin-top:70px;
+		margin-left:5px;
+	}
+.sidebar1 {width :600px;
+           height:40px;
+		   margin-top:10px;
+		   margin-left:40px;
+          }
+.sidebar1 li{ float:left;
+}
+ul.nav li{ padding:15px 20px 15px 20px;
+}
+.sidebar2 { float:left;
+	        width: 500px;
+	        padding: 12px 2px 5px 5px;
+			margin-left:80px;
+}
+div.imgnav { background-color:#F6F4F0;
+			}
+		   
+div.desc { background-color:#F6F4F0;
+		  }	
+.box_right { width:300px;
+             float:none;
+}
+.bl_form input {padding-top: 15px;
+                padding: 5px 15px;
+	            width:200px;
+				
+      }		  
+#cv-sticky{display:none;
+}
+#storyplatform img{ padding:20px 40px 20px 40px;
+             width:500px;
+			 background-color:#F6F4F0;
+			 margin-left:15px;
+			 
+}
+#related {width:600px;
+height:500px;
+border:none;
+margin-top:20px;
+margin-left:40px;
+padding:15px;
+background-color:#F6F4F0;
+-moz-border-radius:0px;
+-webkit-border-radius:0px;
+-o-border-radius:0px;
+border-radius:0px;
+box-shadow:none;
+float:left;
+display:block;
+} 
+#recent_post { width:600px;
+            background-color:#ffcfcc;
+            color:#666;
+            -moz-border-radius:10px;
+            -webkit-border-radius:10px;
+            -o-border-radius:10px;
+            border-radius:10px;
+			font-family:'fontin', Arial, Helvetica, sans-serif;
+            font-size:20px;
+			text-align:center;
+			margin-bottom:40px;
+}
+.header {
+	background:#666;
+	padding-top:5px;
+	padding-bottom:2px;
+	padding-left:5px;
+	width:670px;
+	margin-left:0px;
+}
+.footer {
+	padding: 10px 0;
+	background:#F6F4F0;
+	position: relative;/* this gives IE6 hasLayout to properly clear */
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+	 border-radius:10px;
+	-moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -o-border-radius:10px;
+	width:670px;
+}	
+}
+@media screen and (max-width:799px)and (min-width: 780px) {
+	.body{
+		width:780px;
+	}
+.container {
+	width: 760px;
+	}
+.content{
+		float:none;
+		width:700px;
+		margin-top:70px;
+		margin-left:5px;
+	}
+.sidebar1 {width :600px;
+           height:50px;
+		   margin-top:15px;
+		   margin-left:60px;
+          }
+.sidebar1 li{ float:left;
+}
+ul.nav li{ padding:15px 20px 15px 20px;
+}
+.sidebar2 { float:left;
+	        width: 500px;
+	        padding: 12px 2px 5px 5px;
+			margin-left:80px;
+}
+div.imgnav { background-color:#F6F4F0;
+			}
+		   
+div.desc { background-color:#F6F4F0;
+		  }	
+.box_right { width:300px;
+             float:none;
+}
+.bl_form input {padding-top: 15px;
+                padding: 5px 15px;
+	            width:200px;
+				
+      }		  
+#cv-sticky{display:none;
+}
+#storyplatform img{ padding:20px 60px 20px 60px;
+             width:500px;
+			 background-color:#F6F4F0;
+			 margin-left:16px;
+			 
+}
+#related {width:600px;
+height:500px;
+border:none;
+margin-top:20px;
+margin-left:40px;
+padding:15px;
+background-color:#F6F4F0;
+-moz-border-radius:0px;
+-webkit-border-radius:0px;
+-o-border-radius:0px;
+border-radius:0px;
+box-shadow:none;
+float:left;
+display:block;
+} 
+#recent_post { width:600px;
+            background-color:#ffcfcc;
+            color:#666;
+            -moz-border-radius:10px;
+            -webkit-border-radius:10px;
+            -o-border-radius:10px;
+            border-radius:10px;
+			font-family:'fontin', Arial, Helvetica, sans-serif;
+            font-size:20px;
+			text-align:center;
+			margin-bottom:40px;
+}
+.header {
+	background:#666;
+	padding-top:5px;
+	padding-bottom:2px;
+	padding-left:5px;
+	width:720px;
+	margin-left:10px;
+}
+.footer {
+	padding: 10px 0;
+	background:#F6F4F0;
+	position: relative;/* this gives IE6 hasLayout to properly clear */
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+	 border-radius:10px;
+	-moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -o-border-radius:10px;
+	width:730px;
+}
+}
+@media screen and (max-width:850px) and (min-width: 800px){
+.body{
+		width:800px;
+	}
+.container {
+	width: 780px;
+	}
+.content{
+		float:none;
+		width:750px;
+		margin-top:70px;
+		margin-left:5px;
+	}
+.sidebar1 {width :650px;
+           height:60px;
+		   margin-top:10px;
+		   margin-left:60px;
+          }
+.sidebar1 li{ float:left;
+}
+ul.nav li{ padding:15px 25px 15px 25px;
+}
+.sidebar2 { float:left;
+	        width: 500px;
+	        padding: 12px 2px 5px 5px;
+			margin-left:80px;
+}
+div.imgnav { background-color:#F6F4F0;
+			}
+		   
+div.desc { background-color:#F6F4F0;
+		  }	
+.box_right { width:300px;
+             float:none;
+}
+.bl_form input {padding-top: 15px;
+                padding: 5px 15px;
+	            width:200px;
+				
+      }		  
+#cv-sticky{display:none;
+}
+#storyplatform img{ padding:20px 60px 20px 60px;
+             width:550px;
+			 background-color:#F6F4F0;
+			 margin-left:20px;
+			 
+}
+#related {width:600px;
+height:500px;
+border:none;
+margin-top:20px;
+margin-left:40px;
+padding:15px;
+background-color:#F6F4F0;
+-moz-border-radius:0px;
+-webkit-border-radius:0px;
+-o-border-radius:0px;
+border-radius:0px;
+box-shadow:none;
+float:left;
+display:block;
+} 
+#recent_post { width:600px;
+            background-color:#ffcfcc;
+            color:#666;
+            -moz-border-radius:10px;
+            -webkit-border-radius:10px;
+            -o-border-radius:10px;
+            border-radius:10px;
+			font-family:'fontin', Arial, Helvetica, sans-serif;
+            font-size:20px;
+			text-align:center;
+			margin-bottom:40px;
+}
+.header {
+	background:#666;
+	padding-top:5px;
+	padding-bottom:2px;
+	padding-left:5px;
+	width:750px;
+	margin-left:10px;
+}
+.footer {
+	padding: 10px 0;
+	background:#F6F4F0;
+	position: relative;/* this gives IE6 hasLayout to properly clear */
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+	 border-radius:10px;
+	-moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -o-border-radius:10px;
+	width:700px;
+}
+}
+@media screen and (max-width:899px) and (min-width: 851px){
+.body{
+		width:100%;
+	}
+.container {
+	width: 830px;
+	margin:0px;
+	}
+.content{ float:left;
+		 width:550px;
+		
+	}
+.sidebar1 {width :600px;
+           height:60px;
+		   margin-top:20px;
+		   margin-left:10px;
+          }
+.sidebar1 li{ float:left;
+}
+ul.nav li{ padding:15px 15px 15px 15px;
+}
+.sidebar2 { width:250px;
+            float:left; 
+}
+.ads img{ width:250px;
+}
+div.imgnav { background-color:#F6F4F0;
+			}			   
+div.desc { background-color:#F6F4F0;
+		  }	
+.box_right { width:190px;
+             float:none;
+			 font-size:15px;
+}
+.bl_form input {padding-top: 15px;
+                padding: 5px 15px;
+	            width:190px;
+				
+      }		  
+#cv-sticky{display:none;
+}
+#storyplatform img{ padding:0px;
+             width:468px;
+			 background-color:#cccccc;
+			 margin-left:16px;
+}
+#related {width:600px;
+          height:500px;
+          margin-top:20px;
+          padding:15px;
+          background-color:#F6F4F0;
+		  border:none;
+          -moz-border-radius:0px;
+          -webkit-border-radius:0px;
+          -o-border-radius:0px;
+          border-radius:0px;
+          box-shadow:none;
+          float:left;
+          display:block;
+} 
+#recent_post { width:600px;
+            background-color:#ffcfcc;
+            color:#666;  /*#FFF0A5*/
+            -moz-border-radius:10px;
+            -webkit-border-radius:10px;
+            -o-border-radius:10px;
+            border-radius:10px;
+			font-family:'fontin', Arial, Helvetica, sans-serif;
+            font-size:20px;
+			text-align:center;
+			margin-bottom:40px;
+}
+.search_input { width:200px;	  
+}
+.header {
+	background:#666;
+	padding-top:5px;
+	padding-bottom:2px;
+	padding-left:5px;
+	width:810px;
+	margin-left:10px;
+}
+.footer {
+	padding: 10px 0;
+	background:#F6F4F0;
+	position: relative;/* this gives IE6 hasLayout to properly clear */
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+	 border-radius:10px;
+	-moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -o-border-radius:10px;
+	width:810px;
+}
+}
+
+@media screen and (max-width:930px) and (min-width: 900px){
+ .body{
+		width:100%px;
+	}
+.container {
+	width: 880px;
+	margin:0px;
+	}
+.content{ float:left;
+		 width:600px;
+		
+	}
+.sidebar1 {width :600px;
+           height:60px;
+		   margin-top:20px;
+		   margin-left:10px;
+          }
+.sidebar1 li{ float:left;
+}
+ul.nav li{ padding:15px 20px 15px 20px;
+}
+.sidebar2 { width:250px;
+            float:left; 
+}
+.storypic img{float: none;
+			 margin-left:0px;
+}
+.ads img{ width:250px;
+}
+div.imgnav { background-color:#F6F4F0;
+			}			   
+div.desc { background-color:#F6F4F0;
+		  }	
+.box_right { width:190px;
+             float:none;
+			 font-size:15px;
+}
+.bl_form input {padding-top: 15px;
+                padding: 5px 15px;
+	            width:190px;
+				
+      }		  
+#cv-sticky{display:none;
+}
+#storyplatform img{ padding:12px;
+             width:500px;
+			 background-color:#cccccc;
+			 margin-left:16px;
+}
+#related {width:600px;
+          height:500px;
+          margin-top:20px;
+          padding:15px;
+          background-color:#F6F4F0;
+		  border:none;
+          -moz-border-radius:0px;
+          -webkit-border-radius:0px;
+          -o-border-radius:0px;
+          border-radius:0px;
+          box-shadow:none;
+          float:left;
+          display:block;
+} 
+#recent_post { width:600px;
+            background-color:#ffcfcc;
+            color:#666;  /*#FFF0A5*/
+            -moz-border-radius:10px;
+            -webkit-border-radius:10px;
+            -o-border-radius:10px;
+            border-radius:10px;
+			font-family:'fontin', Arial, Helvetica, sans-serif;
+            font-size:20px;
+			text-align:center;
+			margin-bottom:40px;
+}
+.search_input { width:200px;	  
+}
+.header {
+	background:#666;
+	padding-top:5px;
+	padding-bottom:2px;
+	padding-left:5px;
+	width:850px;
+	margin-left:10px;
+}
+.footer {
+	padding: 10px 0;
+	background:#F6F4F0;
+	position: relative; /* this gives IE6 hasLayout to properly clear*/
+	clear: both;  /* this clear property forces the .container to understand where the columns end and contain them */
+	 border-radius:10px;
+	-moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -o-border-radius:10px;
+	width:850px;
+}
+}
+ 
+@media screen and (max-width:960px) and (min-width: 931px){
+ .body{
+		width:100%px;
+	}
+.container {
+	width: 914px;
+	margin:0px;
+	}
+.content{ float:left;
+		 width:633px;
+		
+	}
+.sidebar1 {width :612px;
+           height:60px;
+		   margin-top:20px;
+		   margin-left:10px;
+          }
+.sidebar1 li{ float:left;
+}
+ul.nav li{ padding:15px 23px 15px 23px;
+}
+.sidebar2 { width:250px;
+            float:left; 
+}
+.storypic img{float: none;
+			 margin-left:0px;
+}
+.ads img{ width:250px;
+}
+div.imgnav { background-color:#F6F4F0;
+			}			   
+div.desc { background-color:#F6F4F0;
+		  }	
+.box_right { width:190px;
+             float:none;
+			 font-size:15px;
+}
+.bl_form input {padding-top: 15px;
+                padding: 5px 15px;
+	            width:190px;
+				
+      }		  
+#cv-sticky{display:none;
+}
+#storyplatform img{ padding: 0px 15px;
+             width:520px;
+			 background-color:#cccccc;
+			 margin-left:17px;
+}
+#related {width:600px;
+          height:500px;
+          margin-top:20px;
+          padding:15px;
+          background-color:#F6F4F0;
+		  border:none;
+          -moz-border-radius:0px;
+          -webkit-border-radius:0px;
+          -o-border-radius:0px;
+          border-radius:0px;
+          box-shadow:none;
+          float:left;
+          display:block;
+} 
+#recent_post { width:600px;
+            background-color:#ffcfcc;
+            color:#666;  /*#FFF0A5*/
+            -moz-border-radius:10px;
+            -webkit-border-radius:10px;
+            -o-border-radius:10px;
+            border-radius:10px;
+			font-family:'fontin', Arial, Helvetica, sans-serif;
+            font-size:20px;
+			text-align:center;
+			margin-bottom:40px;
+}
+.search_input { width:200px;	  
+}
+.header {
+	background:#666;
+	padding-top:5px;
+	padding-bottom:2px;
+	padding-left:5px;
+	width:900px;
+	margin-left:2px;
+}
+.footer {
+	padding: 10px 0;
+	background:#F6F4F0;
+	position: relative;  /* this gives IE6 hasLayout to properly clear*/
+	clear: both;   /* this clear property forces the .container to understand where the columns end and contain them */
+	 border-radius:10px;
+	-moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -o-border-radius:10px;
+	width:850px;
+}
+}
+@media screen and (max-width:990px) and (min-width: 961px){
+ .body{
+		width:100%px;
+	}
+.container {
+	width: 940px;
+	margin:0px;
+	}
+.content{ float:left;
+		 width:650px;
+		
+	}
+.sidebar1 {width :625px;
+           height:60px;
+		   margin-top:20px;
+		   margin-left:10px;
+}
+.sidebar1 li{ float:left;
+}
+ul.nav li{ padding:15px 25px 15px 25px;
+}
+.sidebar2 { width:260px;
+            float:left; 
+}
+.storypic img{float: none;
+			 margin-left:0px;
+}
+.ads img{ width:250px;
+}
+div.imgnav { background-color:#F6F4F0;
+			}			   
+div.desc { background-color:#F6F4F0;
+		  }	
+.box_right { width:190px;
+             float:none;
+			 font-size:15px;
+}
+.bl_form input {padding-top: 15px;
+                padding: 5px 15px;
+	            width:190px;
+				
+      }		  
+#cv-sticky{display:none;
+}
+#storyplatform img{ padding: 5px 15px;
+             width:550px;
+			 background-color:#cccccc;
+			 margin-left:10px;
+}
+#related {width:600px;
+          height:500px;
+          margin-top:20px;
+          padding:15px;
+          background-color:#F6F4F0;
+		  border:none;
+          -moz-border-radius:0px;
+          -webkit-border-radius:0px;
+          -o-border-radius:0px;
+          border-radius:0px;
+          box-shadow:none;
+          float:left;
+          display:block;
+} 
+#recent_post { width:600px;
+            background-color:#ffcfcc;
+            color:#666;  /*#FFF0A5*/
+            -moz-border-radius:10px;
+            -webkit-border-radius:10px;
+            -o-border-radius:10px;
+            border-radius:10px;
+			font-family:'fontin', Arial, Helvetica, sans-serif;
+            font-size:20px;
+			text-align:center;
+			margin-bottom:40px;
+}
+.search_input { width:200px;	  
+}
+.header {
+	background:#666;
+	padding-top:5px;
+	padding-bottom:2px;
+	padding-left:5px;
+	width:936px;
+	margin-left:0px;
+}
+.footer {
+	padding: 10px 0;
+	background:#F6F4F0;
+	position: relative;  /* this gives IE6 hasLayout to properly clear*/
+	clear: both;   /* this clear property forces the .container to understand where the columns end and contain them */
+	 border-radius:10px;
+	-moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -o-border-radius:10px;
+	width:850px;
+}
+}
+@media screen and (max-width:1025px) and (min-width: 991px){
+ .body{
+		width:100%px;
+	}
+.container {
+	width: 970px;
+	margin:0px;
+	}
+.content{ float:left;
+		 width:680px;
+		
+	}
+.sidebar1 {width :660px;
+           height:60px;
+		   margin-top:20px;
+		   margin-left:10px;
+}
+.sidebar1 li{ float:left;
+}
+ul.nav li{ padding:15px 28px 15px 28px;
+}
+.sidebar2 { width:260px;
+            float:left; 
+}
+.storypic img{float: none;
+			 margin-left:0px;
+}
+
+div.imgnav { background-color:#F6F4F0;
+			}			   
+div.desc { background-color:#F6F4F0;
+		  }	
+.box_right { width:190px;
+             float:none;
+			 font-size:15px;
+}
+.bl_form input {padding-top: 15px;
+                padding: 5px 15px;
+	            width:190px;
+ }		  
+#cv-sticky{display:none;
+}
+.ads img{ width:270px;
+}
+#storyplatform img{ padding: 15px 20px;
+             width:550px;
+			 background-color:#cccccc;
+			 margin-left:18px;
+}
+#related {width:600px;
+          height:500px;
+          margin-top:20px;
+          padding:15px;
+          background-color:#F6F4F0;
+		  border:none;
+          -moz-border-radius:0px;
+          -webkit-border-radius:0px;
+          -o-border-radius:0px;
+          border-radius:0px;
+          box-shadow:none;
+          float:left;
+          display:block;
+} 
+#recent_post { width:600px;
+            background-color:#ffcfcc;
+            color:#666;  /*#FFF0A5*/
+            -moz-border-radius:10px;
+            -webkit-border-radius:10px;
+            -o-border-radius:10px;
+            border-radius:10px;
+			font-family:'fontin', Arial, Helvetica, sans-serif;
+            font-size:20px;
+			text-align:center;
+			margin-bottom:40px;
+}
+.search_input { width:200px;	  
+}
+.header {
+	background:#666;
+	padding-top:5px;
+	padding-bottom:2px;
+	padding-left:5px;
+	width:960px;
+	margin-left:0px;
+}
+.footer {
+	padding: 10px 0;
+	background:#F6F4F0;
+	position: relative;  /* this gives IE6 hasLayout to properly clear*/
+	clear: both;   /* this clear property forces the .container to understand where the columns end and contain them */
+	 border-radius:10px;
+	-moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -o-border-radius:10px;
+	width:850px;
+}
+}
+
+@media screen and (max-width:1080px) and (min-width:1026px){
+ .body{
+		width:100%px;
+	}
+.container {
+	width: 1000px;
+	margin:0px;
+	}
+.content{ float:left;
+		 width:500px;	
+	}
+.sidebar1 {float:left;
+           width :150px;
+		   margin-top:20px;
+		   margin-left:8px;
+}
+.sidebar2 { width:300px;
+            float:left; 
+}
+.storypic img{float: none;
+			 margin-left:0px;
+}
+
+div.imgnav { background-color:#F6F4F0;
+			}			   
+div.desc { background-color:#F6F4F0;
+		  }	
+.box_right { width:300px;
+             float:none;
+			 font-size:15px;
+}
+.bl_form input {padding-top: 15px;
+                padding: 5px 15px;
+	            width:220px;
+ }		  
+#cv-sticky{display:none;
+}
+.ads img{ width:270px;
+}
+#storyplatform img{ padding: 10px 0px;
+             width:400px;
+			 background-color:#cccccc;
+			 margin-left:25px;
+}
+#related {width:600px;
+          height:500px;
+          margin-top:20px;
+          padding:15px;
+          background-color:#F6F4F0;
+		  border:none;
+          -moz-border-radius:0px;
+          -webkit-border-radius:0px;
+          -o-border-radius:0px;
+          border-radius:0px;
+          box-shadow:none;
+          float:left;
+          display:block;
+} 
+#recent_post { width:600px;
+            background-color:#ffcfcc;
+            color:#666;  /*#FFF0A5*/
+            -moz-border-radius:10px;
+            -webkit-border-radius:10px;
+            -o-border-radius:10px;
+            border-radius:10px;
+			font-family:'fontin', Arial, Helvetica, sans-serif;
+            font-size:20px;
+			text-align:center;
+			margin-bottom:40px;
+}
+.search_input { width:200px;	  
+}
+.header {
+	background:#666;
+	padding-top:5px;
+	padding-bottom:2px;
+	padding-left:5px;
+	width:1000px;
+	margin-left:0px;
+}
+.footer {
+	padding: 10px 0;
+	background:#F6F4F0;
+	position: relative;  /* this gives IE6 hasLayout to properly clear*/
+	clear: both;   /* this clear property forces the .container to understand where the columns end and contain them */
+	 border-radius:10px;
+	-moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -o-border-radius:10px;
+	width:1000px;
+}
+}
+@media screen and (max-width:1120px) and (min-width:1081px){
+ .body{
+		width:100%px;
+	}
+.container {
+	width: 1060px;
+	margin:0px;
+	}
+.content{ float:left;
+		 width:550px;	
+	}
+.sidebar1 {float:left;
+           width :160px;
+		   margin-top:20px;
+		   margin-left:8px;
+}
+.sidebar2 { width:300px;
+            float:left; 
+}
+div.imgnav { background-color:#F6F4F0;
+			}			   
+div.desc { background-color:#F6F4F0;
+		  }	
+.box_right { width:300px;
+             float:none;
+			 font-size:15px;
+}
+.bl_form input {padding-top: 15px;
+                padding: 5px 15px;
+	            width:220px;
+ }		  
+#cv-sticky{display:none;
+}
+.ads img{ width:270px;
+}
+#storyplatform img{ padding: 15px 0px;
+             width:450px;
+			 background-color:#cccccc;
+			 margin-left:25px;
+}
+#related {width:600px;
+          height:500px;
+          margin-top:20px;
+          padding:15px;
+          background-color:#F6F4F0;
+		  border:none;
+          -moz-border-radius:0px;
+          -webkit-border-radius:0px;
+          -o-border-radius:0px;
+          border-radius:0px;
+          box-shadow:none;
+          float:left;
+          display:block;
+} 
+#recent_post { width:600px;
+            background-color:#ffcfcc;
+            color:#666;  /*#FFF0A5*/
+            -moz-border-radius:10px;
+            -webkit-border-radius:10px;
+            -o-border-radius:10px;
+            border-radius:10px;
+			font-family:'fontin', Arial, Helvetica, sans-serif;
+            font-size:20px;
+			text-align:center;
+			margin-bottom:40px;
+}
+.search_input { width:200px;	  
+}
+.header {
+	background:#666;
+	padding-top:5px;
+	padding-bottom:2px;
+	padding-left:5px;
+	width:1050px;
+	margin-left:0px;
+}
+.footer {
+	padding: 10px 0;
+	background:#F6F4F0;
+	position: relative;  /* this gives IE6 hasLayout to properly clear*/
+	clear: both;   /* this clear property forces the .container to understand where the columns end and contain them */
+	 border-radius:10px;
+	-moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -o-border-radius:10px;
+	width:1050px;
+}
+}
+
+@media screen and (max-width:1150px) and (min-width:1121px){
+ .body{
+		width:100%px;
+	}
+.container {
+	width: 1100px;
+	margin:0px;
+	}
+.content{ float:left;
+		 width:565px;	
+	}
+.sidebar1 {float:left;
+           width :162px;
+		   margin-top:20px;
+		   margin-left:8px;
+}
+.sidebar2 { width:330px;
+            float:left; 
+}
+div.imgnav { background-color:#F6F4F0;
+			}			   
+div.desc { background-color:#F6F4F0;
+		  }	
+.box_right { width:300px;
+             float:none;
+			 font-size:15px;
+}
+.bl_form input {padding-top: 15px;
+                padding: 5px 15px;
+	            width:220px;
+ }		  
+.ads img{ width:270px;
+}
+#storyplatform img{ padding: 15px 10px;
+             width:470px;
+			 background-color:#cccccc;
+			 margin-left:15px;
+}
+#related {width:600px;
+          height:500px;
+          margin-top:20px;
+          padding:15px;
+          background-color:#F6F4F0;
+		  border:none;
+          -moz-border-radius:0px;
+          -webkit-border-radius:0px;
+          -o-border-radius:0px;
+          border-radius:0px;
+          box-shadow:none;
+          float:left;
+          display:block;
+} 
+#recent_post { width:600px;
+            background-color:#ffcfcc;
+            color:#666;  /*#FFF0A5*/
+            -moz-border-radius:10px;
+            -webkit-border-radius:10px;
+            -o-border-radius:10px;
+            border-radius:10px;
+			font-family:'fontin', Arial, Helvetica, sans-serif;
+            font-size:20px;
+			text-align:center;
+			margin-bottom:40px;
+}
+.search_input { width:200px;	  
+}
+.header {
+	background:#666;
+	padding-top:5px;
+	padding-bottom:2px;
+	padding-left:5px;
+	width:1090px;
+	margin-left:0px;
+}
+.footer {
+	padding: 10px 0;
+	background:#F6F4F0;
+	position: relative;  /* this gives IE6 hasLayout to properly clear*/
+	clear: both;   /* this clear property forces the .container to understand where the columns end and contain them */
+	 border-radius:10px;
+	-moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -o-border-radius:10px;
+	width:1090px;
+}
+}
+
+@media screen and (max-width:1200px) and (min-width:1151px){
+ .body{
+		width:100%px;
+	}
+.container {
+	width: 1130px;
+	margin:0px;
+	}
+.content{ float:left;
+		 width:565px;	
+	}
+.sidebar1 {float:left;
+           width :180px;
+		   margin-top:20px;
+		   margin-left:8px;
+}
+.sidebar2 { width:330px;
+            float:left; 
+}
+div.imgnav { background-color:#F6F4F0;
+			}			   
+div.desc { background-color:#F6F4F0;
+		  }	
+.box_right { width:320px;
+             float:none;
+			 font-size:15px;
+}
+.bl_form input {padding-top: 15px;
+                padding: 5px 15px;
+	            width:220px;
+ }		  
+#storyplatform img{ padding: 15px 10px;
+             width:480px;
+			 background-color:#cccccc;
+			 margin-left:10px;
+}
+#related {width:600px;
+          height:500px;
+          margin-top:20px;
+          padding:15px;
+          background-color:#F6F4F0;
+		  border:none;
+          -moz-border-radius:0px;
+          -webkit-border-radius:0px;
+          -o-border-radius:0px;
+          border-radius:0px;
+          box-shadow:none;
+          float:left;
+          display:block;
+} 
+#recent_post { width:600px;
+            background-color:#ffcfcc;
+            color:#666;  /*#FFF0A5*/
+            -moz-border-radius:10px;
+            -webkit-border-radius:10px;
+            -o-border-radius:10px;
+            border-radius:10px;
+			font-family:'fontin', Arial, Helvetica, sans-serif;
+            font-size:20px;
+			text-align:center;
+			margin-bottom:40px;
+}
+.search_input { width:220px;	  
+}
+.header {
+	background:#666;
+	padding-top:5px;
+	padding-bottom:2px;
+	padding-left:5px;
+	width:1125px;
+	margin-left:0px;
+}
+.footer {
+	padding: 10px 0;
+	background:#F6F4F0;
+	position: relative;  /* this gives IE6 hasLayout to properly clear*/
+	clear: both;   /* this clear property forces the .container to understand where the columns end and contain them */
+	 border-radius:10px;
+	-moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -o-border-radius:10px;
+	width:1100px;
+}
+}
+@media screen and (max-width:1230px) and (min-width:1201px){
+ .body{
+		width:100%px;
+	}
+.container {
+	width: 1180px;
+	margin:0px;
+	}
+.content{ float:left;
+		 width:580px;	
+	}
+.sidebar1 {float:left;
+           width :200px;
+		   margin-top:20px;
+		   margin-left:8px;
+}
+.sidebar2 { width:352px;
+            float:left;
+}
+div.imgnav { background-color:#F6F4F0;
+			}			   
+div.desc { background-color:#F6F4F0;
+		  }	
+.box_right { width:320px;
+             float:none;
+			 font-size:15px;
+}
+.bl_form input {padding-top: 15px;
+                padding: 5px 15px;
+	            width:220px;
+ }		  
+#storyplatform img{ padding: 15px 10px;
+             width:495px;
+			 background-color:#cccccc;
+			 margin-left:10px;
+}
+#related {width:600px;
+          height:500px;
+          margin-top:20px;
+          padding:15px;
+          background-color:#F6F4F0;
+		  border:none;
+          -moz-border-radius:0px;
+          -webkit-border-radius:0px;
+          -o-border-radius:0px;
+          border-radius:0px;
+          box-shadow:none;
+          float:left;
+          display:block;
+} 
+#recent_post { width:600px;
+            background-color:#ffcfcc;
+            color:#666;  /*#FFF0A5*/
+            -moz-border-radius:10px;
+            -webkit-border-radius:10px;
+            -o-border-radius:10px;
+            border-radius:10px;
+			font-family:'fontin', Arial, Helvetica, sans-serif;
+            font-size:20px;
+			text-align:center;
+			margin-bottom:40px;
+}
+.search_input { width:220px;	  
+}
+.header {
+	background:#666;
+	padding-top:5px;
+	padding-bottom:2px;
+	padding-left:5px;
+	width:1175px;
+	margin-left:0px;
+}
+.footer {
+	padding: 10px 0;
+	background:#F6F4F0;
+	position: relative;  /* this gives IE6 hasLayout to properly clear*/
+	clear: both;   /* this clear property forces the .container to understand where the columns end and contain them */
+	 border-radius:10px;
+	-moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -o-border-radius:10px;
+	width:1150px;
+}
+}
+
+@media screen and (max-width:1245px) and (min-width:1231px){
+ .body{
+		width:100%px;
+	}
+.container {
+	width: 1210px;
+	margin:0px;
+	}
+.content{ float:left;
+		 width:600px;	
+	}
+.sidebar1 {float:left;
+           width :200px;
+		   margin-top:20px;
+		   margin-left:8px;
+}
+.sidebar2 { width:358px;
+            float:left;
+}
+div.imgnav { background-color:#F6F4F0;
+			}			   
+div.desc { background-color:#F6F4F0;
+		  }	
+.box_right { width:320px;
+             float:none;
+			 font-size:15px;
+			 margin-left:2px; 
+}
+.bl_form input {padding-top: 15px;
+                padding: 5px 15px;
+	            width:220px;
+ }		  
+#storyplatform img{ padding: 15px 15px;
+             width:500px;
+			 background-color:#cccccc;
+			 margin-left:10px;
+}
+#related {width:600px;
+          height:500px;
+          margin-top:20px;
+          padding:15px;
+          background-color:#F6F4F0;
+		  border:none;
+          -moz-border-radius:0px;
+          -webkit-border-radius:0px;
+          -o-border-radius:0px;
+          border-radius:0px;
+          box-shadow:none;
+          float:left;
+          display:block;
+} 
+#recent_post { width:600px;
+            background-color:#ffcfcc;
+            color:#666;  /*#FFF0A5*/
+            -moz-border-radius:10px;
+            -webkit-border-radius:10px;
+            -o-border-radius:10px;
+            border-radius:10px;
+			font-family:'fontin', Arial, Helvetica, sans-serif;
+            font-size:20px;
+			text-align:center;
+			margin-bottom:40px;
+}
+.search_input { width:220px;
+}
+.header {
+	background:#666;
+	padding-top:5px;
+	padding-bottom:2px;
+	padding-left:5px;
+	width:1200px;
+	margin-left:0px;
+}
+.footer {
+	padding: 10px 0;
+	background:#F6F4F0;
+	position: relative;  /* this gives IE6 hasLayout to properly clear*/
+	clear: both;   /* this clear property forces the .container to understand where the columns end and contain them */
+	 border-radius:10px;
+	-moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -o-border-radius:10px;
+	width:1200px;
+}
+}
+@media screen and (max-width:1260px) and (min-width:1246px){
+ .body{
+		width:100%px;
+	}
+.container {
+	width: 1225px;
+	margin:0px;
+	}
+.content{ float:left;
+		 width:650px;	
+	}
+.sidebar1 {float:left;
+           width :200px;
+		   margin-top:20px;
+		   margin-left:8px;
+}
+.sidebar2 { width:320px;
+            float:left;
+}
+div.imgnav { background-color:#F6F4F0;
+			}			   
+div.desc { background-color:#F6F4F0;
+		  }	
+.box_right { width:320px;
+             float:none;
+			 font-size:15px;
+			 margin-left:2px; 
+}
+.bl_form input {padding-top: 15px;
+                padding: 5px 15px;
+	            width:220px;
+ }		
+#storyplatform img{ padding: 15px 15px;
+             width:560px;
+			 background-color:#cccccc;
+			 margin-left:8px;
+}
+#related {width:600px;
+          height:500px;
+          margin-top:20px;
+          padding:15px;
+          background-color:#F6F4F0;
+		  border:none;
+          -moz-border-radius:0px;
+          -webkit-border-radius:0px;
+          -o-border-radius:0px;
+          border-radius:0px;
+          box-shadow:none;
+          float:left;
+          display:block;
+} 
+#recent_post { width:600px;
+            background-color:#ffcfcc;
+            color:#666;  /*#FFF0A5*/
+            -moz-border-radius:10px;
+            -webkit-border-radius:10px;
+            -o-border-radius:10px;
+            border-radius:10px;
+			font-family:'fontin', Arial, Helvetica, sans-serif;
+            font-size:20px;
+			text-align:center;
+			margin-bottom:40px;
+}
+.search_input { width:220px;
+}
+.header {
+	background:#666;
+	padding-top:5px;
+	padding-bottom:2px;
+	padding-left:5px;
+	width:1220px;
+	margin-left:0px;
+}
+.footer {
+	padding: 10px 0;
+	background:#F6F4F0;
+	position: relative;  /* this gives IE6 hasLayout to properly clear*/
+	clear: both;   /* this clear property forces the .container to understand where the columns end and contain them */
+	 border-radius:10px;
+	-moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -o-border-radius:10px;
+	width:1210px;
+}
+}
+
+/*
+@media print{
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5){
+}*/

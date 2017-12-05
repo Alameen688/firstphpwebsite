@@ -1,0 +1,2782 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	font: 100%/1.4 verdana,helvetica,arial,sans-serif;
+	background:#eeeeee;
+	margin: 0;
+	padding: 0;
+	color:#FFF;
+	background-attachment:fixed; 
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;
+	padding-right: 15px;
+	padding-left: 15px; 
+}
+ul, ol, dl {
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+a { 
+    color:#77c043;
+}
+a:hover { 
+    color:#888888;
+}
+
+/* ~~ This fixed width container surrounds all other divs ~~ */
+.container {
+	width: 1250px;
+	font-size:16px;
+	color:#404040;
+    background-color:#eeeeee;/*#F6F4F0*/
+	margin: 0 auto;
+	background-attachment:fixed; 
+	zoom:1;
+}
+.header {
+	background:#ccdb9f;/*#666*/
+	padding-top:5px;
+	padding-bottom:2px;
+	padding-left:5px;
+}
+.sidebar1 {
+	float: left;
+	width: 200px;
+	background:#eeeeee;/*#cccccc*/
+	margin-top:22px;
+	padding-bottom: 10px;
+	color:#F5821F;
+	margin-right:10px;
+}
+.content {padding: 10px 0;
+	width: 700px;
+	float: left;
+}
+.admin { list-style:none;
+}
+.admin a{
+	text-decoration:none;
+}
+.sidebar2 {
+	float: left;
+	width: 300px;
+	padding: 10px;
+	margin-top:17px;
+    background-color:#eeeeee; /*#cccccc*/
+    margin-left:4px;
+}
+.nav{background-color:#D4D4D4; /* makes it darker*/
+}
+.nav li:hover,.nav li:active{
+   background-image:-webkit-gradient(linear, left top, right top, from(rgba(168,168,168,0.5)),color-stop(0.5,rgba(168,168,168,0)), to(rgba(168,168,168,0.5)));
+	background-image:-moz-linear-gradient(left, rgba(168,168,168,0.5), rgba(168,168,168,0) 50%, rgba(168,168,168,0.5));
+	background-image:-o-linear-gradient(left, rgba(168,168,168,0.5), rgba(168,168,168,0) 50%, rgba(168,168,168,0.5));
+	background-image:-ms-linear-gradient(left, rgba(168,168,168,0.5), rgba(168,168,168,0) 50%, rgba(168,168,168,0.5));
+	background-image:linear-gradient(left, rgba(168,168,168,0.5), rgba(168,168,168,0) 50%, rgba(168,168,168,0.5));
+
+	}
+ul.nav a{ text-decoration:none;
+        list-style:none;
+		text-align:center;
+		font-size:22px;
+		color:#404040;
+		font-family: 'fontin',Verdana, Geneva, sans-serif;
+}
+ul.nav a:hover,ul.nav a:active{
+	color:#ffab00;
+	}
+ul.nav {
+		text-align:center;
+		list-style:none;
+}
+
+ul.nav li{ background-color:whitesmoke;background-image:-moz-linear-gradient(top,white,#e6e6e6);background-image:-webkit-gradient(linear,0 0,0 100%,from(white),to(#e6e6e6));background-image:-webkit-linear-gradient(top,white,#e6e6e6);background-image:-o-linear-gradient(top,white,#e6e6e6);background-image:linear-gradient(to bottom,white,#e6e6e6);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff',endColorstr='#ffe6e6e6',GradientType=0);border-color:#e6e6e6 #e6e6e6 silver;border-color:rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);*background-color:#e6e6e6;filter:progid:DXImageTransform.Microsoft.gradient(enabled = false);border:1px solid #ccc;
+border-bottom: 1px solid #fff;
+           padding:20px
+}
+
+/* ~~ The footer styles ~~ */
+.footer {
+	padding: 10px 0;
+	background:#eeeeee;/*#F6F4F0*/
+	position: relative;/* this gives IE6 hasLayout to properly clear */
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+	 border-radius:10px;
+	-moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -o-border-radius:10px;
+	color:#77c043;
+}
+#topic { color:#C30075;
+	}
+.clayer {border:1px solid #D4D4D4;
+         margin:10px;
+		 background-color:#FFFFFF;
+		 text-align:left;
+		 padding:10px; 
+		 font-family:'fontin',verdana,helvetica,sans-serif;
+		 -moz-box-shadow: 0px 0px 20px 3px #d3d3d3;
+		 -webkit-box-shadow: 0px 0px 20px 3px #d3d3d3;
+		 -o-box-shadow: 0px 0px 20px 3px #d3d3d3;
+		 box-shadow: 0px 0px 20px 3px #d3d3d3;
+		 border-radius:10px;
+	     -moz-border-radius:10px;
+         -webkit-border-radius:10px;
+         -o-border-radius:10px;
+	     font-weight:normal;
+        }
+.clayer a { color:#C30075;
+            list-style-type:none;
+			text-decoration:none;
+}
+#error{ color:#F00;
+	}
+#e-message{ color:#F00;
+            font-size:14px;
+	}		
+.clayer a:hover{text-decoration:underline;
+                
+}
+#related {width:900px;
+height:220px;
+border:1px solid #FFF;
+margin-top:20px;
+padding:15px;
+background-color:#FFF;
+-moz-border-radius:10px;
+-webkit-border-radius:10px;
+-o-border-radius:10px;
+border-radius:10px;
+box-shadow: 0px 0px 20px 3px #d3d3d3;
+
+}
+#recent_post { width:900px;
+            background-color:#ffcfcc;
+            color:#666; /*#FFF0A5*/
+            -moz-border-radius:10px;
+            -webkit-border-radius:10px;
+            -o-border-radius:10px;
+            border-radius:10px;
+			font-family:'fontin', Arial, Helvetica, sans-serif;
+            font-size:20px;
+			text-align:center;
+}
+
+/* Button */
+.my-button,
+.my-button:hover {
+position: relative;
+max-width: 100%;
+color: #ffffff;
+font-size: 15px;
+line-height: 1;
+padding: 10px;
+border-top-width: 1px;
+border-style: solid;
+display: inline-block;
+margin: 5px;
+font-weight: bold;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+border-radius: 10px;
+-webkit-box-shadow: 0 0 5px rgba(0,0,0,0.3);
+-moz-box-shadow: 0 0 5px rgba(0,0,0,0.3);
+box-shadow:  0 0 5px rgba(0,0,0,0.3);
+}
+.s-button,
+.s-button:hover {
+position: relative;
+max-width: 100%;
+color: #ffffff;
+font-size: 15px;
+line-height: 1;
+padding: 5px;
+border-top-width: 1px;
+border-style: solid;
+display: inline-block;
+margin: 5px;
+font-weight: bold;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+border-radius: 10px;
+-webkit-box-shadow: 0 0 5px rgba(0,0,0,0.3);
+-moz-box-shadow: 0 0 5px rgba(0,0,0,0.3);
+box-shadow:  0 0 5px rgba(0,0,0,0.3);
+}
+/* Red Button */
+.my-button.red,.s-button.red {
+border: 1px solid #76151a;
+background-color: #93063b;
+background-image: -moz-linear-gradient(#b03238, #93063b);
+background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#b03238), to(#93063b));
+background-image: -webkit-linear-gradient(#b03238, #93063b);
+background-image: -o-linear-gradient(#b03238, #93063b);
+background-image: -ms-linear-gradient(#b03238, #93063b);
+-pie-background: linear-gradient(#b03238, #93063b);
+color:#FF3;
+}
+#login{position: relative;
+width: 100px;
+font-size: 15px;
+line-height: 1;
+padding:5px;
+margin-top:25px;
+margin-left:240px;
+border-top-width: 1px;
+border-style: solid;
+display: inline-block;
+font-weight: bold;
+-moz-border-radius: 15px;
+-webkit-border-radius: 15px;
+border-radius: 15px;
+-webkit-box-shadow: 0 0 5px rgba(0,0,0,0.3);
+-moz-box-shadow: 0 0 5px rgba(0,0,0,0.3);
+box-shadow:  0 0 5px rgba(0,0,0,0.3);
+border: 1px solid #76151a;
+background-color: #93063b;
+background-image: -moz-linear-gradient(#b03238, #93063b);
+background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#b03238), to(#93063b));
+background-image: -webkit-linear-gradient(#b03238, #93063b);
+background-image: -o-linear-gradient(#b03238, #93063b);
+background-image: -ms-linear-gradient(#b03238, #93063b);
+-pie-background: linear-gradient(#b03238, #93063b);
+color:#FF3;
+}
+#login:hover{
+	position: relative;
+line-height: 1;
+padding: 5px;
+border-top-width: 1px;
+border-style: solid;
+display: inline-block;
+-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.3);
+-moz-box-shadow: 0 0 10px rgba(0,0,0,0.3);
+box-shadow:  0 0 10px rgba(0,0,0,0.3);
+}
+
+/* new awesome button*/
+#button1 {
+  /* General Propertoes */
+  height:29px;
+  max-width:100%;
+  border:1px solid #858fa6;
+  background:#4a5775;
+  margin-top:10px;
+  /* CSS3 Styling */
+  background:-moz-linear-gradient(top, #606c88, #3f4c6b);
+  background:-webkit-gradient(linear, left top, left bottom, from(#606c88), to(#3f4c6b));
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  border-radius:5px;
+  -moz-box-shadow:0px 0px 5px #000;
+  -webkit-box-shadow:0px 0px 5px #000;
+  box-shadow:0px 0px 5px #000;
+  /* Text Styling */
+  font-family:'storybook', Georgia, 'Times New Roman', serif;
+  color:#e5edff;
+  font-size:15px;
+  text-shadow:0px 0px 5px rgba(0, 0, 0, 0.75);
+  padding-bottom:3px;
+}
+
+#button1:hover, #button1:focus {
+  border-color:#adbad9;
+}
+  
+#button1:active {
+  background:-moz-linear-gradient(bottom, #606c88, #3f4c6b);
+  background:-webkit-gradient(linear, left bottom, left top, from(#606c88), to(#3f4c6b));
+  text-shadow:0px 0px 2px #000;
+}
+.heading{ width:300px;
+}
+#storyplatform { background-color:#fafcf6;/*#fff9c0*/
+                 border: 1px thin;
+                 box-shadow: 0px 0px 20px 3px #d3d3d3;
+		         border-radius:10px;
+	             -moz-border-radius:10px;
+                 -webkit-border-radius:10px;
+                 -o-border-radius:10px;
+				 padding:5px;
+				 margin:10px;
+				 font-family:'fontin',verdana,helvetica,sans-serif;
+}
+#articleimage{ border:1px solid #ccc;
+               margin:10px 45px 10px 45px ;
+			   padding:10px 5px 25px 5px;
+			   background-color:#eeeeee;
+			   }
+#commentlayer {  font-family:'fontin',verdana,helvetica,sans-serif;
+	             background-color:#FFF;/*#fff9c0*/
+                 border: 1px thin;
+                 box-shadow: 0px 0px 20px 3px #d3d3d3;
+		         border-radius:10px;
+	             -moz-border-radius:10px;
+                 -webkit-border-radius:10px;
+                 -o-border-radius:10px;
+				 padding:5px 15px 20px 15px;
+				 margin:10px;
+				 font-size:19px; 
+	}
+#commentzone { margin-left:10px;
+               color:#999999;
+			   border:1px #999 solid;
+			   padding:0px 0px 0px 70px;
+			   border-radius:3px;
+	           -moz-border-radius:3px;
+               -webkit-border-radius:3px;
+               -o-border-radius:3px;		
+			   background-color:whitesmoke;
+			   background-image:-moz-linear-gradient(top,white,#e6e6e6);
+			   background-image:-webkit-gradient(linear,0              0,0 100%,from(white),to(#e6e6e6));
+			   background-image:-webkit-linear-gradient(top,white,#e6e6e6);
+			   background-image:-o-linear-gradient(top,white,#e6e6e6);
+			   background-image:linear-gradient(to bottom,white,#e6e6e6);
+			   background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff',endColorstr='#ffe6e6e6'               ,GradientType=0);
+			   border-color:#e6e6e6 #e6e6e6 silver;
+			   border-color:rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+			   *background-color:#e6e6e6;filter:progid:DXImageTransform.Microsoft.gradient(enabled = false);border:1px solid #ccc; 
+}
+textarea#com_box{
+	width:530px;
+	height:100px;
+	border:1px solid #D4D4D4;
+    border-radius:5px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    -o-border-radius:5px;
+	padding:5px;
+	margin:0px;
+	margin-top:-20px;
+	color:#C30075;
+	font-family:'fontin', Helvetica, sans-serif;
+	}
+#notification{
+	      color:#0090AC;
+	}	
+#notification span{
+	             color:#77c043;
+	}	
+#com_box:focus{
+border:1px solid #D4D4D4;
+-moz-box-shadow: 1px 1px 5px #6FF;/*#777*/
+-webkit-box-shadow: 1px 1px 5px #6FF;
+box-shadow: 1px 1px 5px #6FF;
+	-webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}		
+#logform{ margin-left:50px;
+
+}	
+#logform label{ color:#0090AC; 
+}
+#user{ float:left;
+       margin-left:-60px;
+	   margin-top:10px;
+	}
+.pointer{
+border:solid 15px transparent;
+border-right-color:#F6F4F0;
+position:absolute;
+margin:15px 0 0 71px;
+z-index:999;
+}		
+#posts{ border:1px solid #d4d4d4;
+        margin-top:6px;
+		margin-left:100px;
+		margin-bottom:20px;
+        padding:5px;
+		background-color:#F6F4F0;
+		font-size:15px;
+		color:#5B5B5B;
+	    border-radius:6px;
+	    -moz-border-radius:6px;
+        -webkit-border-radius:6px;
+        -o-border-radius:6px;
+        -webkit-box-sizing:border-box;
+        -moz-box-sizing:border-box;
+        -o-box-sizing:border-box;
+        box-sizing:border-box;
+	}	
+.avatar{ float:left;
+         margin-top:5px;
+         margin-left:15px;
+        
+}
+.avatar img{ padding:5px;
+             width:60px;
+		     height:60px;
+			background-color:#F6F4F0;
+	} 
+.post-by{ font-size:22px;
+          color:#0090AC;
+		  float:left;
+		   position:absolute;
+		  text-shadow: 0px 1px 2px #F6F4F0;
+		  -moz-text-shadow: 0px 1px 2px #F6F4F0;
+		  margin-left:10px;
+	}
+.post-by:hover{
+	text-decoration:underline;
+}
+.post-date{ font-size:14px;
+            padding-top:10px;
+            font-family:'fontin',Helvetica Nue, sans-serif;
+			margin-left:380px;
+			color:#444;
+	
+	}		
+.post-content{ padding:0px 5px 5px 5px;
+	           font-size:14px;
+			   margin-right:2px;
+			   color:#5B5B5B;/*#444*/
+			   width:500px;
+			   -webkit-box-sizing:border-box;
+               -moz-box-sizing:border-box;
+               -o-box-sizing:border-box;
+               box-sizing:border-box;
+	   
+	}	
+#logbut{ 
+	}	
+	
+input#button3 {
+  /* General Properties */
+  height:20px;
+  width:150px;
+  border:1px solid #494949;
+  background:#404040;
+  /* CSS3 Styling */
+  background:-moz-radial-gradient(bottom, #656565, #404040 60%);
+  background:-webkit-gradient(radial, center bottom, 0, center 230, 230, from(#656565), to(#404040));
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  border-radius:3px;
+  -moz-box-shadow:0px 0px 3px #000;
+  -webkit-box-shadow:0px 0px 3px #000;
+  box-shadow:0px 0px 3px #000;
+  /* Text Styling */
+  color:#fff;
+  text-shadow:0px 0px 5px rgba(255, 255,255, 0.5);
+  font-family:'fontin', Verdana, Arial, sans-serif;
+  font-size:15px;
+  padding-top:0px;
+  margin-left:400px;
+}
+  
+input#button3:hover, input#button3:focus {
+  background:-moz-radial-gradient(bottom, #656565, #404040 80%);
+  background:-webkit-gradient(radial, center bottom, 0, center 230, 250, from(#656565), to(#404040));
+}
+
+input#button3:active {
+  -moz-box-shadow:0px 0px 2px #000;
+  -webkit-box-shadow:0px 0px 2px #000;
+  box-shadow:0px 0px 2px #000;
+  text-shadow:0px 0px 8px rgba(255, 255,255, 1);
+}	
+.forminput{width:220px;
+height: 25px;
+font-size: 15px;
+border-radius:5px;
+border-radius: 10px;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,0.075);
+-moz-box-shadow:inset 0 1px 1px rgba(0,0,0,0.075);
+box-shadow:inset 0 1px 1px rgba(0,0,0,0.075);
+-webkit-transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+-moz-transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+padding: 2px 15px 2px 15px;
+border:1px solid #999999;
+color:#C30075;
+padding:3px 8px 3px 8px;
+font-family: 'Cantarell',Helvetica, sans-serif;
+ background-color:#F6F4F0;
+	}	
+	
+.brief{ clear:both;
+}
+#subscribe{ padding:2px 0 0 2px;
+              font-family:'fontin', Helvetica, sans-serif;
+              font-size: 20px;
+			  color:#f58220;
+			  border:1px solid #CCC;
+			  border-radius:3px;
+	           -moz-border-radius:3px;
+               -webkit-border-radius:3px;
+               -o-border-radius:3px;		
+			   background-color:whitesmoke;
+			   background-image:-moz-linear-gradient(top,white,#e6e6e6);
+			   background-image:-webkit-gradient(linear,0              0,0 100%,from(white),to(#e6e6e6));
+			   background-image:-webkit-linear-gradient(top,white,#e6e6e6);
+			   background-image:-o-linear-gradient(top,white,#e6e6e6);
+			   background-image:linear-gradient(to bottom,white,#e6e6e6);
+			   background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff',endColorstr='#ffe6e6e6'               ,GradientType=0);
+			   border-color:#e6e6e6 #e6e6e6 silver;
+			   border-color:rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+			   *background-color:#e6e6e6;filter:progid:DXImageTransform.Microsoft.gradient(enabled = false);border:1px solid #ccc; 
+			   box-shadow:0px 6px 10px 3px #CCC;
+			   -webkit-box-shadow:0px 6px 10px 3px #CCC;
+			   -moz-box-shadow:0px 6px 10px 3px #CCC;
+			   -o-box-shadow:0px 6px 10px 3px #CCC;
+}
+.subscribeinput{font-family:'fontin', Helvetica, sans-serif;
+                font-size:9px;
+				color:#666;
+              }
+#subscribelayer{ border:1px solid #CCC;
+                 background-color:#eeeeee;
+				 padding:5px;
+				 font-family:'fontin', Helvetica, sans-serif;
+                 font-size: 15px;
+			     color:#f58220;
+				 box-shadow:0px 6px 10px 3px #CCC;
+				 -webkit-box-shadow:0px 6px 10px 3px #CCC;
+				 -moz-box-shadow:0px 6px 10px 3px #CCC;
+				 -o-box-shadow:0px 6px 10px 3px #CCC;
+	}
+.bl_form input {padding-top: 15px;
+      background: rgba(255,255,255,0.10);
+      border: none;
+      padding: 5px 15px;
+      border-radius: 8px;
+	  -webkit-border-radius: 8px;
+	  -moz-border-radius: 8px;
+	  -o-border-radius: 8px;
+      font-size: 16px;
+      outline: none;
+	  width:250px;
+      border:1px solid #999;
+      margin-bottom:10px;
+}
+#subscribebut{ 
+         width:100px;
+         color:#FF3;
+		 margin:2px 2px 5px 180px;
+	     border: 1px solid #76151a;
+         font-family:'fontin', Helvetica, sans-serif;
+          background-color: #93063b;
+          background-image: -moz-linear-gradient(#b03238, #93063b);
+          background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#b03238), to(#93063b));
+          background-image: -webkit-linear-gradient(#b03238, #93063b);
+          background-image: -o-linear-gradient(#b03238, #93063b);
+          background-image: -ms-linear-gradient(#b03238, #93063b);
+          -pie-background: linear-gradient(#b03238, #93063b);
+	}
+#subscribebut:hover{	
+	-webkit-box-shadow: 0 0 5px rgba(0,0,0,0.3);
+-moz-box-shadow: 0 0 5px rgba(0,0,0,0.3);
+box-shadow:  0 0 5px rgba(0,0,0,0.3);
+text-decoration:underline;
+}
+.box_right{float:right;
+           text-align:center;
+		   margin-top:20px;
+}
+#search { font-family: 'storybook', Verdana, Geneva;
+          color:#f58220;	
+}
+.search_input { border:1px solid #999999;
+          border-radius: 10px;
+         -moz-border-radius: 10px;
+         -webkit-border-radius: 10px;
+		  color:#C30075;
+		  padding:5px;
+		  font-family:'fontin', Helvetica, sans-serif;
+		  background-color:#F6F4F0;
+		   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+		   width:200px;
+}
+.clayer img{ border:1px solid #FFF;
+             padding:20px;
+			 background-color:#cccccc;
+			 margin-left:20px;
+} 
+/*admin style*/
+#adminHeader {
+  width: 620px;
+  padding: 0 10px;
+  border-bottom: 1px solid #00a0b0;
+  margin: 0px 0 0px 0;
+  font-size: 0.8em;
+}
+/* Style the form with a coloured background, along with curved corners and a drop shadow */
+
+#editarticle {
+  width:630px;
+  margin: 0px 5px 20px 20px;
+  padding: 40px 20px;
+  overflow: auto;
+  background: #fff4cf;
+  border: 1px solid #666;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;  
+  border-radius: 5px;
+  -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+}
+
+
+/* Give form elements consistent margin, padding and line height */
+
+#editarticle ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#editarticle ul li {
+  margin: .9em 0 0 0;
+  padding: 0;
+}
+
+#editarticle * {
+  line-height: 1em;
+}
+
+
+/* The field labels */
+
+#editarticle label {
+  display: block;
+  float: left;
+  clear: left;
+  text-align: right;
+  width: 15%;
+  padding: .4em 0 0 0;
+  margin: .15em .5em 0 0;
+}
+
+
+/* The fields */
+
+#editarticle input, #editarticle select, #editarticle textarea {
+  display: block;
+  margin: 0;
+  padding: .4em;
+  width: 80%;
+}
+
+#editarticle input, #editarticle textarea, #editarticle .date {
+  border: 2px solid #666;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;    
+  border-radius: 5px;
+  background: #fff;
+}
+
+#editarticle input {
+  font-size: .9em;
+}
+
+#editarticle select {
+  padding: 0;
+  margin-bottom: 2.5em;
+  position: relative;
+  top: .7em;
+}
+
+#editarticle textarea {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  font-size: .9em;
+  height: 5em;
+  line-height: 1.5em;
+}
+
+#editarticle textarea#content {
+  font-family: "Courier New", courier, fixed;
+}
+  
+
+/* Place a border around focused fields */
+
+#editarticle *:focus {
+  border: 2px solid #7c412b;
+  outline: none;
+}
+
+
+/* Display correctly filled-in fields with a green background */
+
+#editarticle input:valid, #editarticle textarea:valid {
+  background: #efe;
+}
+
+/* Submit buttons */
+
+#editarticle .buttons {
+  text-align: center;
+  margin: 40px 0 0 0;
+}
+
+#editarticle input[type="submit"] {
+  display: inline;
+  margin: 0 20px;
+  width: 12em;
+  padding: 10px;
+  border: 2px solid #7c412b;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;  
+  border-radius: 5px;
+  -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  color: #fff;
+  background: #ef7d50;
+  font-weight: bold;
+  -webkit-appearance: none;
+}
+
+#editarticle input[type="submit"]:hover, #editarticle input[type="submit"]:active {
+  cursor: pointer;
+  background: #fff;
+  color: #ef7d50;
+}
+
+#editarticle input[type="submit"]:active {
+  background: #eee;
+  -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
+  -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
+  box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
+}
+/*submit button ends*/
+/* Tables */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+tr, th, td {
+  padding: 10px;
+  margin: 0;
+  text-align: left;
+}
+
+table, th {
+  border: 1px solid #00a0b0;
+}
+
+th {
+  border-left: none;
+  border-right: none;
+  background: #ef7d50;
+  color: #fff;
+  cursor: default;
+}
+
+tr:nth-child(odd) {
+  background: #fff4cf;
+}
+
+tr:nth-child(even) {
+  background: #fff;
+}
+
+tr:hover {
+  background: #ddd;
+  cursor: pointer;
+}
+
+
+/* Status and error boxes */
+
+.statusMessage, .errorMessage {
+  font-size: .8em;
+  padding: .5em;
+  margin: 2em 0;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; 
+  -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  -box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+}
+
+.statusMessage {
+  background-color: #2b2;
+  border: 1px solid #080;
+  color: #fff;
+}
+
+.errorMessage {
+  background-color: #f22;
+  border: 1px solid #800;
+  color: #fff;
+}
+
+
+/*admin style ends*/
+/* initial #F6F4F0,#FFF0A5 nice color #f58220 lighter #ffab00*/
+/* @media rule for different device width*/
+@media screen and (max-width:349px) and (min-width:200px) {
+ .body{
+		width:100%;
+	}
+.container {
+	width:320px;
+	}
+.content{
+		float:none;
+		width:320px;
+		margin-top:180px;
+		margin-left:-2px;
+	}
+.clayer { border-bottom:1px solid #FFF;
+         margin:5px;
+		 box-shadow:none;
+		 border-radius:0px;
+	     -moz-border-radius:0px;
+         -webkit-border-radius:0px;
+         -o-border-radius:0px;
+        }	
+.sidebar1 {width :200px;
+		   margin-top:10px;
+		   margin-left:30px;
+}
+.sidebar1 li{ float:left;
+}
+ul.nav li{ padding:1px 20px 1px 20px;
+           width:180px;
+		   border-bottom:none;
+		   border-radius:30px 5px 30px 5px;
+	     -moz-border-radius:30px 5px 30px 5px;
+         -webkit-border-radius:30px 5px 30px 5px;
+         -o-border-radius:30px 5px 30px 5px;
+          
+}
+.sidebar2 { float:left;
+	        width: 280px;
+	        padding: 12px 2px 5px 5px;
+			margin-left:10px;
+}	
+.box_right { width:280px;
+             float:none;
+			 margin-left:10px;
+}
+#search{ margin-left:-20px;
+	}
+.search_input { width:180px;
+		        padding:5px;
+}
+.bl_form input {padding-top: 15px;
+                padding: 5px 20px;
+	            width:180px;
+				margin-left:10px;
+      }	
+	  
+.ads img{ width:200px;
+	}	  	  
+#cv-sticky{display:none;
+}
+.clayer img{ padding:0px;
+             width:270px;
+			 background-color:#F6F4F0;
+			 margin-left:4px;
+			 
+}
+#related {width:280px;
+height:inherit;
+border:none;
+margin-top:20px;
+margin-left:-5px;
+padding:15px;
+background-color:#F6F4F0;
+-moz-border-radius:0px;
+-webkit-border-radius:0px;
+-o-border-radius:0px;
+border-radius:0px;
+box-shadow:none;
+float:left;
+display:block;
+} 
+#recent_post { width:280px;
+            background-color:#ffcfcc;
+            color:#666;
+            -moz-border-radius:10px;
+            -webkit-border-radius:10px;
+            -o-border-radius:10px;
+            border-radius:10px;
+			font-family:'fontin', Arial, Helvetica, sans-serif;
+            font-size:20px;
+			text-align:center;
+			margin-bottom:40px;
+}
+.header {
+	background:#666;
+	padding-top:5px;
+	padding-bottom:2px;
+	padding-left:5px;
+	width:300px;
+	margin-left:2px;
+}
+.footer {
+	padding: 10px 0;
+	background:#F6F4F0;
+	position: relative;/* this gives IE6 hasLayout to properly clear */
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+	 border-radius:10px;
+	-moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -o-border-radius:10px;
+	width:300px;
+}		
+}
+@media screen and (max-width:409px)and (min-width: 350px) {
+.body{
+		width:100%;
+	}
+.container {
+	width:330px;
+	}
+.content{
+		float:none;
+		width:330px;
+		margin-top:180px;
+		margin-left:-2px;
+	}
+.clayer { border-bottom:1px solid #FFF;
+         margin:5px;
+		 box-shadow:none;
+		 border-radius:0px;
+	     -moz-border-radius:0px;
+         -webkit-border-radius:0px;
+         -o-border-radius:0px;
+        }	
+.sidebar1 {width :270px;
+		   margin-top:10px;
+		   margin-left:20px;
+}
+.sidebar1 li{ float:left;
+}
+ul.nav li{ padding:1px 30px 1px 30px;
+           width:200px;
+		   border-bottom:none;
+		   border-radius:30px 5px 30px 5px;
+	     -moz-border-radius:30px 5px 30px 5px;
+         -webkit-border-radius:30px 5px 30px 5px;
+         -o-border-radius:30px 5px 30px 5px;
+          
+}
+.sidebar2 { float:left;
+	        width: 310px;
+	        padding: 12px 2px 5px 5px;
+			margin-left:10px;
+}
+.box_right { width:280px;
+             float:none;
+			 margin-left:10px;
+}
+#search{ margin-left:-20px;
+	}
+.search_input { width:200px;
+		        padding:5px;
+}
+.bl_form input {padding-top: 15px;
+                padding: 5px 20px;
+	            width:180px;
+				margin-left:20px;
+      }	
+	  
+.ads img{ width:200px;
+	}	  	  
+#cv-sticky{display:none;
+}
+.clayer img{ padding:0px;
+             width:300px;
+			 background-color:#F6F4F0;
+			 margin-left:-2px;
+			 
+}
+#related {width:300px;
+height:inherit;
+border:none;
+margin-top:20px;
+margin-left:-5px;
+padding:15px;
+background-color:#F6F4F0;
+-moz-border-radius:0px;
+-webkit-border-radius:0px;
+-o-border-radius:0px;
+border-radius:0px;
+box-shadow:none;
+float:left;
+display:block;
+} 
+#recent_post { width:280px;
+            background-color:#ffcfcc;
+            color:#666;
+            -moz-border-radius:10px;
+            -webkit-border-radius:10px;
+            -o-border-radius:10px;
+            border-radius:10px;
+			font-family:'fontin', Arial, Helvetica, sans-serif;
+            font-size:20px;
+			text-align:center;
+			margin-bottom:40px;
+}
+.header {
+	background:#666;
+	padding-top:5px;
+	padding-bottom:2px;
+	padding-left:5px;
+	width:320px;
+	margin-left:5px;
+}
+.footer {
+	padding: 10px 0;
+	background:#F6F4F0;
+	position: relative;/* this gives IE6 hasLayout to properly clear */
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+	 border-radius:10px;
+	-moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -o-border-radius:10px;
+	width:320px;
+}		
+}
+@media screen and (max-width:449px)and (min-width: 410px) {
+   .body{
+		width:100%;
+	}
+.container {
+	width:390px;
+	}
+.content{
+		float:none;
+		width:380px;
+		margin-top:180px;
+		margin-left:-2px;
+	}
+.clayer { border-bottom:1px solid #FFF;
+         margin:5px;
+		 box-shadow:none;
+		 border-radius:0px;
+	     -moz-border-radius:0px;
+         -webkit-border-radius:0px;
+         -o-border-radius:0px;
+        }	
+.sidebar1 {width :270px;
+		   margin-top:10px;
+		   margin-left:50px;
+}
+.sidebar1 li{ float:left;
+}
+ul.nav li{ padding:1px 30px 1px 30px;
+           width:200px;
+		   border-bottom:none;
+		   border-radius:30px 5px 30px 5px;
+	     -moz-border-radius:30px 5px 30px 5px;
+         -webkit-border-radius:30px 5px 30px 5px;
+         -o-border-radius:30px 5px 30px 5px;
+          
+}
+.sidebar2 { float:left;
+	        width: 350px;
+	        padding: 12px 2px 5px 5px;
+			margin-left:10px;
+}
+.box_right { width:320px;
+             float:none;
+			 margin-left:10px;
+}
+#search{ margin-left:-20px;
+	}
+.search_input { width:200px;
+		        padding:5px;
+}
+.bl_form input {padding-top: 15px;
+                padding: 5px 20px;
+	            width:200px;
+				margin-left:20px;
+      }	
+	  
+.ads img{ width:200px;
+	}	  	  
+#cv-sticky{display:none;
+}
+.clayer img{ padding:0px;
+             width:330px;
+			 background-color:#F6F4F0;
+			 margin-left:5px;
+			 
+}
+#related {width:340px;
+height:inherit;
+border:none;
+margin-top:20px;
+margin-left:-5px;
+padding:15px;
+background-color:#F6F4F0;
+-moz-border-radius:0px;
+-webkit-border-radius:0px;
+-o-border-radius:0px;
+border-radius:0px;
+box-shadow:none;
+float:left;
+display:block;
+} 
+#recent_post { width:280px;
+            background-color:#ffcfcc;
+            color:#666;
+            -moz-border-radius:10px;
+            -webkit-border-radius:10px;
+            -o-border-radius:10px;
+            border-radius:10px;
+			font-family:'fontin', Arial, Helvetica, sans-serif;
+            font-size:20px;
+			text-align:center;
+			margin-bottom:40px;
+}
+.header {
+	background:#666;
+	padding-top:5px;
+	padding-bottom:2px;
+	padding-left:5px;
+	width:360px;
+	margin-left:5px;
+}
+.footer {
+	padding: 10px 0;
+	background:#F6F4F0;
+	position: relative;/* this gives IE6 hasLayout to properly clear */
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+	 border-radius:10px;
+	-moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -o-border-radius:10px;
+	width:360px;
+}		
+}
+@media screen and (max-width:539px)and (min-width: 450px) {
+.body{
+		width:100%;
+	}
+.container {
+	width:430px;
+	}
+.content{
+		float:none;
+		width:430px;
+		margin-top:190px;
+		margin-left:0px;
+	}
+.clayer { border-bottom:1px solid #FFF;
+         margin:5px;
+		 box-shadow:none;
+		 border-radius:0px;
+	     -moz-border-radius:0px;
+         -webkit-border-radius:0px;
+         -o-border-radius:0px;
+        }	
+.sidebar1 {width :280px;
+		   margin-top:10px;
+	      margin-left:70px;
+}
+.sidebar1 li{ float:left;
+}
+ul.nav li{  padding:1px 30px 1px 30px;
+           width:200px;
+		   border-bottom:none;
+		   border-radius:30px 5px 30px 5px;
+	     -moz-border-radius:30px 5px 30px 5px;
+         -webkit-border-radius:30px 5px 30px 5px;
+         -o-border-radius:30px 5px 30px 5px;
+         
+}
+.sidebar2 { float:left;
+	        width: 380px;
+	        padding: 12px 2px 5px 5px;
+			margin-left:10px;
+}
+.box_right { width:400px;
+             float:none;
+			 margin-left:10px;
+}
+#search{ margin-left:-20px;
+	}
+.search_input { width:230px;
+		        padding:5px;
+}
+.bl_form input {padding-top: 15px;
+                padding: 5px 20px;
+	            width:220px;
+				margin-left:20px;
+      }	
+.ads img{ width:300px;
+	}	  	  
+#cv-sticky{display:none;
+}
+.clayer img{ padding:0px;
+             width:360px;
+			 background-color:#F6F4F0;
+			 margin-left:15px;
+			 
+}
+#related {width:400px;
+height:inherit;
+border:none;
+margin-top:20px;
+margin-left:0px;
+padding:15px;
+background-color:#F6F4F0;
+-moz-border-radius:0px;
+-webkit-border-radius:0px;
+-o-border-radius:0px;
+border-radius:0px;
+box-shadow:none;
+float:left;
+display:block;
+} 
+#recent_post { width:300px;
+            background-color:#ffcfcc;
+            color:#666;
+            -moz-border-radius:10px;
+            -webkit-border-radius:10px;
+            -o-border-radius:10px;
+            border-radius:10px;
+			font-family:'fontin', Arial, Helvetica, sans-serif;
+            font-size:20px;
+			text-align:center;
+			margin-bottom:40px;
+}
+.header {
+	background:#666;
+	padding-top:5px;
+	padding-bottom:2px;
+	padding-left:5px;
+	width:420px;
+	margin-left:5px;
+}
+.footer {
+	padding: 10px 0;
+	background:#F6F4F0;
+	position: relative;/* this gives IE6 hasLayout to properly clear */
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+	 border-radius:10px;
+	-moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -o-border-radius:10px;
+	width:400px;
+}	
+}
+@media screen and (max-width:610px)and (min-width: 540px) {
+	.body{
+		width:100%;
+	}
+.container {
+	width:510px;
+	}
+.content{
+		float:none;
+		width:520px;
+		margin-top:45px;
+		margin-left:-5px;
+		margin-right:0px;
+	}
+.sidebar1 {width :440px;
+		   margin-top:5px;
+		   margin-left:40px;
+}
+.sidebar1 li{ float:left;
+}
+ul.nav li{ padding:5px 5px 5px 5px;
+          
+}
+.sidebar2 { float:left;
+	        width: 360px;
+	        padding: 12px 2px 5px 5px;
+			margin-left:30px;
+}
+.box_right { width:400px;
+             float:none;
+			 margin-left:10px;
+}
+#search{ margin-left:-20px;
+	}
+.search_input { width:230px;
+		        padding:5px;
+}
+.bl_form input {padding-top: 15px;
+                padding: 5px 20px;
+	            width:220px;
+      }		  
+#cv-sticky{display:none;
+}
+.clayer img{ padding:0px;
+             width:420px;
+			 background-color:#F6F4F0;
+			 margin-left:25px;
+			 
+}
+#related {width:400px;
+height:inherit;
+border:none;
+margin-top:20px;
+margin-left:40px;
+padding:15px;
+background-color:#F6F4F0;
+-moz-border-radius:0px;
+-webkit-border-radius:0px;
+-o-border-radius:0px;
+border-radius:0px;
+box-shadow:none;
+float:left;
+display:block;
+} 
+#recent_post { width:400px;
+            background-color:#ffcfcc;
+            color:#666;
+            -moz-border-radius:10px;
+            -webkit-border-radius:10px;
+            -o-border-radius:10px;
+            border-radius:10px;
+			font-family:'fontin', Arial, Helvetica, sans-serif;
+            font-size:20px;
+			text-align:center;
+			margin-bottom:40px;
+}
+.header {
+	background:#666;
+	padding-top:5px;
+	padding-bottom:2px;
+	padding-left:5px;
+	width:500px;
+	margin-left:-5px;
+}
+.footer {
+	padding: 10px 0;
+	background:#F6F4F0;
+	position: relative;/* this gives IE6 hasLayout to properly clear */
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+	 border-radius:10px;
+	-moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -o-border-radius:10px;
+	width:500px;
+}	
+}
+@media screen and (max-width:699px)and (min-width: 609px) {
+.body{
+		width:100%;
+	}
+.container {
+	width:590px;
+	}
+.content{
+		float:none;
+		width:560px;
+		margin-top:70px;
+		margin-left:-5px;
+		margin-right:0px;
+	}
+.sidebar1 {width :500px;
+		   margin-top:10px;
+		   margin-left:40px;
+}
+.sidebar1 li{ float:left;
+}
+ul.nav li{ padding:10px 10px 10px 10px;
+}
+.sidebar2 { float:left;
+	        width: 500px;
+	        padding: 12px 2px 5px 5px;
+			margin-left:80px;
+}
+.box_right { width:400px;
+             float:none;
+			 margin-left:10px;
+}
+#search{ margin-left:-50px;
+	}
+.search_input { width:300px;
+		        padding:5px;
+}
+.bl_form input {padding-top: 15px;
+                padding: 5px 20px;
+	            width:250px;
+      }		  
+#cv-sticky{display:none;
+}
+.clayer img{ padding:0px;
+             width:480px;
+			 background-color:#F6F4F0;
+			 margin-left:15px;
+			 
+}
+#related {width:500px;
+height:inherit;
+border:none;
+margin-top:20px;
+margin-left:40px;
+padding:15px;
+background-color:#F6F4F0;
+-moz-border-radius:0px;
+-webkit-border-radius:0px;
+-o-border-radius:0px;
+border-radius:0px;
+box-shadow:none;
+float:left;
+display:block;
+} 
+#recent_post { width:400px;
+            background-color:#ffcfcc;
+            color:#666;
+            -moz-border-radius:10px;
+            -webkit-border-radius:10px;
+            -o-border-radius:10px;
+            border-radius:10px;
+			font-family:'fontin', Arial, Helvetica, sans-serif;
+            font-size:20px;
+			text-align:center;
+			margin-bottom:40px;
+}
+.header {
+	background:#666;
+	padding-top:5px;
+	padding-bottom:2px;
+	padding-left:5px;
+	width:550px;
+	margin-left:2px;
+}
+.footer {
+	padding: 10px 0;
+	background:#F6F4F0;
+	position: relative;/* this gives IE6 hasLayout to properly clear */
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+	 border-radius:10px;
+	-moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -o-border-radius:10px;
+	width:500px;
+}	
+	
+}
+@media screen and (max-width:779px)and (min-width: 700px) {
+  .body{
+		width:700px;
+	}
+.container {
+	width: 680px;
+	}
+.content{
+		float:none;
+		width:670px;
+		margin-top:70px;
+		margin-left:5px;
+	}
+.sidebar1 {width :600px;
+           height:40px;
+		   margin-top:10px;
+		   margin-left:40px;
+          }
+.sidebar1 li{ float:left;
+}
+ul.nav li{ padding:15px 20px 15px 20px;
+}
+.sidebar2 { float:left;
+	        width: 500px;
+	        padding: 12px 2px 5px 5px;
+			margin-left:80px;
+}
+.box_right { width:300px;
+             float:none;
+}
+.bl_form input {padding-top: 15px;
+                padding: 5px 15px;
+	            width:200px;
+				
+      }		  
+#cv-sticky{display:none;
+}
+.clayer img{ padding:20px 40px 20px 40px;
+             width:500px;
+			 background-color:#F6F4F0;
+			 margin-left:15px;
+			 
+}
+#related {width:600px;
+height:500px;
+border:none;
+margin-top:20px;
+margin-left:40px;
+padding:15px;
+background-color:#F6F4F0;
+-moz-border-radius:0px;
+-webkit-border-radius:0px;
+-o-border-radius:0px;
+border-radius:0px;
+box-shadow:none;
+float:left;
+display:block;
+} 
+#recent_post { width:600px;
+            background-color:#ffcfcc;
+            color:#666;
+            -moz-border-radius:10px;
+            -webkit-border-radius:10px;
+            -o-border-radius:10px;
+            border-radius:10px;
+			font-family:'fontin', Arial, Helvetica, sans-serif;
+            font-size:20px;
+			text-align:center;
+			margin-bottom:40px;
+}
+.header {
+	background:#666;
+	padding-top:5px;
+	padding-bottom:2px;
+	padding-left:5px;
+	width:670px;
+	margin-left:0px;
+}
+.footer {
+	padding: 10px 0;
+	background:#F6F4F0;
+	position: relative;/* this gives IE6 hasLayout to properly clear */
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+	 border-radius:10px;
+	-moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -o-border-radius:10px;
+	width:670px;
+}	
+}
+@media screen and (max-width:799px)and (min-width: 780px) {
+	.body{
+		width:780px;
+	}
+.container {
+	width: 760px;
+	}
+.content{
+		float:none;
+		width:700px;
+		margin-top:70px;
+		margin-left:5px;
+	}
+.sidebar1 {width :600px;
+           height:50px;
+		   margin-top:15px;
+		   margin-left:60px;
+          }
+.sidebar1 li{ float:left;
+}
+ul.nav li{ padding:15px 20px 15px 20px;
+}
+.sidebar2 { float:left;
+	        width: 500px;
+	        padding: 12px 2px 5px 5px;
+			margin-left:80px;
+}
+.box_right { width:300px;
+             float:none;
+}
+.bl_form input {padding-top: 15px;
+                padding: 5px 15px;
+	            width:200px;
+				
+      }		  
+#cv-sticky{display:none;
+}
+.clayer img{ padding:20px 60px 20px 60px;
+             width:500px;
+			 background-color:#F6F4F0;
+			 margin-left:16px;
+			 
+}
+#related {width:600px;
+height:500px;
+border:none;
+margin-top:20px;
+margin-left:40px;
+padding:15px;
+background-color:#F6F4F0;
+-moz-border-radius:0px;
+-webkit-border-radius:0px;
+-o-border-radius:0px;
+border-radius:0px;
+box-shadow:none;
+float:left;
+display:block;
+} 
+#recent_post { width:600px;
+            background-color:#ffcfcc;
+            color:#666;
+            -moz-border-radius:10px;
+            -webkit-border-radius:10px;
+            -o-border-radius:10px;
+            border-radius:10px;
+			font-family:'fontin', Arial, Helvetica, sans-serif;
+            font-size:20px;
+			text-align:center;
+			margin-bottom:40px;
+}
+.header {
+	background:#666;
+	padding-top:5px;
+	padding-bottom:2px;
+	padding-left:5px;
+	width:720px;
+	margin-left:10px;
+}
+.footer {
+	padding: 10px 0;
+	background:#F6F4F0;
+	position: relative;/* this gives IE6 hasLayout to properly clear */
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+	 border-radius:10px;
+	-moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -o-border-radius:10px;
+	width:730px;
+}
+}
+@media screen and (max-width:850px) and (min-width: 800px){
+.body{
+		width:800px;
+	}
+.container {
+	width: 780px;
+	}
+.content{
+		float:none;
+		width:750px;
+		margin-top:70px;
+		margin-left:5px;
+	}
+.sidebar1 {width :650px;
+           height:60px;
+		   margin-top:10px;
+		   margin-left:60px;
+          }
+.sidebar1 li{ float:left;
+}
+ul.nav li{ padding:15px 25px 15px 25px;
+}
+.sidebar2 { float:left;
+	        width: 500px;
+	        padding: 12px 2px 5px 5px;
+			margin-left:80px;
+}
+.box_right { width:300px;
+             float:none;
+}
+.bl_form input {padding-top: 15px;
+                padding: 5px 15px;
+	            width:200px;
+				
+      }		  
+#cv-sticky{display:none;
+}
+.clayer img{ padding:20px 60px 20px 60px;
+             width:550px;
+			 background-color:#F6F4F0;
+			 margin-left:20px;
+			 
+}
+#related {width:600px;
+height:500px;
+border:none;
+margin-top:20px;
+margin-left:40px;
+padding:15px;
+background-color:#F6F4F0;
+-moz-border-radius:0px;
+-webkit-border-radius:0px;
+-o-border-radius:0px;
+border-radius:0px;
+box-shadow:none;
+float:left;
+display:block;
+} 
+#recent_post { width:600px;
+            background-color:#ffcfcc;
+            color:#666;
+            -moz-border-radius:10px;
+            -webkit-border-radius:10px;
+            -o-border-radius:10px;
+            border-radius:10px;
+			font-family:'fontin', Arial, Helvetica, sans-serif;
+            font-size:20px;
+			text-align:center;
+			margin-bottom:40px;
+}
+.header {
+	background:#666;
+	padding-top:5px;
+	padding-bottom:2px;
+	padding-left:5px;
+	width:750px;
+	margin-left:10px;
+}
+.footer {
+	padding: 10px 0;
+	background:#F6F4F0;
+	position: relative;/* this gives IE6 hasLayout to properly clear */
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+	 border-radius:10px;
+	-moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -o-border-radius:10px;
+	width:700px;
+}
+}
+@media screen and (max-width:899px) and (min-width: 851px){
+.body{
+		width:100%;
+	}
+.container {
+	width: 830px;
+	margin:0px;
+	}
+.content{ float:left;
+		 width:550px;
+		
+	}
+.sidebar1 {width :600px;
+           height:60px;
+		   margin-top:20px;
+		   margin-left:10px;
+          }
+.sidebar1 li{ float:left;
+}
+ul.nav li{ padding:15px 15px 15px 15px;
+}
+.sidebar2 { width:250px;
+            float:left; 
+}
+.ads img{ width:250px;
+}	
+.box_right { width:190px;
+             float:none;
+			 font-size:15px;
+}
+.bl_form input {padding-top: 15px;
+                padding: 5px 15px;
+	            width:190px;
+				
+      }		  
+#cv-sticky{display:none;
+}
+.clayer img{ padding:0px;
+             width:468px;
+			 background-color:#cccccc;
+			 margin-left:16px;
+}
+#related {width:600px;
+          height:500px;
+          margin-top:20px;
+          padding:15px;
+          background-color:#F6F4F0;
+		  border:none;
+          -moz-border-radius:0px;
+          -webkit-border-radius:0px;
+          -o-border-radius:0px;
+          border-radius:0px;
+          box-shadow:none;
+          float:left;
+          display:block;
+} 
+#recent_post { width:600px;
+            background-color:#ffcfcc;
+            color:#666;  /*#FFF0A5*/
+            -moz-border-radius:10px;
+            -webkit-border-radius:10px;
+            -o-border-radius:10px;
+            border-radius:10px;
+			font-family:'fontin', Arial, Helvetica, sans-serif;
+            font-size:20px;
+			text-align:center;
+			margin-bottom:40px;
+}
+.search_input { width:200px;	  
+}
+.header {
+	background:#666;
+	padding-top:5px;
+	padding-bottom:2px;
+	padding-left:5px;
+	width:810px;
+	margin-left:10px;
+}
+.footer {
+	padding: 10px 0;
+	background:#F6F4F0;
+	position: relative;/* this gives IE6 hasLayout to properly clear */
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+	 border-radius:10px;
+	-moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -o-border-radius:10px;
+	width:810px;
+}
+}
+
+@media screen and (max-width:930px) and (min-width: 900px){
+ .body{
+		width:100%px;
+	}
+.container {
+	width: 880px;
+	margin:0px;
+	}
+.content{ float:left;
+		 width:600px;
+		
+	}
+.sidebar1 {width :600px;
+           height:60px;
+		   margin-top:20px;
+		   margin-left:10px;
+          }
+.sidebar1 li{ float:left;
+}
+ul.nav li{ padding:15px 20px 15px 20px;
+}
+.sidebar2 { width:250px;
+            float:left; 
+}
+.storypic img{float: none;
+			 margin-left:0px;
+}
+.ads img{ width:250px;
+}
+.box_right { width:190px;
+             float:none;
+			 font-size:15px;
+}
+.bl_form input {padding-top: 15px;
+                padding: 5px 15px;
+	            width:190px;
+				
+      }		  
+#cv-sticky{display:none;
+}
+.clayer img{ padding:12px;
+             width:500px;
+			 background-color:#cccccc;
+			 margin-left:16px;
+}
+#related {width:600px;
+          height:500px;
+          margin-top:20px;
+          padding:15px;
+          background-color:#F6F4F0;
+		  border:none;
+          -moz-border-radius:0px;
+          -webkit-border-radius:0px;
+          -o-border-radius:0px;
+          border-radius:0px;
+          box-shadow:none;
+          float:left;
+          display:block;
+} 
+#recent_post { width:600px;
+            background-color:#ffcfcc;
+            color:#666;  /*#FFF0A5*/
+            -moz-border-radius:10px;
+            -webkit-border-radius:10px;
+            -o-border-radius:10px;
+            border-radius:10px;
+			font-family:'fontin', Arial, Helvetica, sans-serif;
+            font-size:20px;
+			text-align:center;
+			margin-bottom:40px;
+}
+.search_input { width:200px;	  
+}
+.header {
+	background:#666;
+	padding-top:5px;
+	padding-bottom:2px;
+	padding-left:5px;
+	width:850px;
+	margin-left:10px;
+}
+.footer {
+	padding: 10px 0;
+	background:#F6F4F0;
+	position: relative; /* this gives IE6 hasLayout to properly clear*/
+	clear: both;  /* this clear property forces the .container to understand where the columns end and contain them */
+	 border-radius:10px;
+	-moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -o-border-radius:10px;
+	width:850px;
+}
+}
+ 
+@media screen and (max-width:960px) and (min-width: 931px){
+ .body{
+		width:100%px;
+	}
+.container {
+	width: 914px;
+	margin:0px;
+	}
+.content{ float:left;
+		 width:633px;
+		
+	}
+.sidebar1 {width :612px;
+           height:60px;
+		   margin-top:20px;
+		   margin-left:10px;
+          }
+.sidebar1 li{ float:left;
+}
+ul.nav li{ padding:15px 23px 15px 23px;
+}
+.sidebar2 { width:250px;
+            float:left; 
+}
+.storypic img{float: none;
+			 margin-left:0px;
+}
+.ads img{ width:250px;
+}
+.box_right { width:190px;
+             float:none;
+			 font-size:15px;
+}
+.bl_form input {padding-top: 15px;
+                padding: 5px 15px;
+	            width:190px;
+				
+      }		  
+#cv-sticky{display:none;
+}
+.clayer img{ padding: 0px 15px;
+             width:520px;
+			 background-color:#cccccc;
+			 margin-left:17px;
+}
+#related {width:600px;
+          height:500px;
+          margin-top:20px;
+          padding:15px;
+          background-color:#F6F4F0;
+		  border:none;
+          -moz-border-radius:0px;
+          -webkit-border-radius:0px;
+          -o-border-radius:0px;
+          border-radius:0px;
+          box-shadow:none;
+          float:left;
+          display:block;
+} 
+#recent_post { width:600px;
+            background-color:#ffcfcc;
+            color:#666;  /*#FFF0A5*/
+            -moz-border-radius:10px;
+            -webkit-border-radius:10px;
+            -o-border-radius:10px;
+            border-radius:10px;
+			font-family:'fontin', Arial, Helvetica, sans-serif;
+            font-size:20px;
+			text-align:center;
+			margin-bottom:40px;
+}
+.search_input { width:200px;	  
+}
+.header {
+	background:#666;
+	padding-top:5px;
+	padding-bottom:2px;
+	padding-left:5px;
+	width:900px;
+	margin-left:2px;
+}
+.footer {
+	padding: 10px 0;
+	background:#F6F4F0;
+	position: relative;  /* this gives IE6 hasLayout to properly clear*/
+	clear: both;   /* this clear property forces the .container to understand where the columns end and contain them */
+	 border-radius:10px;
+	-moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -o-border-radius:10px;
+	width:850px;
+}
+}
+@media screen and (max-width:990px) and (min-width: 961px){
+ .body{
+		width:100%px;
+	}
+.container {
+	width: 940px;
+	margin:0px;
+	}
+.content{ float:left;
+		 width:650px;
+		
+	}
+.sidebar1 {width :625px;
+           height:60px;
+		   margin-top:20px;
+		   margin-left:10px;
+}
+.sidebar1 li{ float:left;
+}
+ul.nav li{ padding:15px 25px 15px 25px;
+}
+.sidebar2 { width:260px;
+            float:left; 
+}
+.storypic img{float: none;
+			 margin-left:0px;
+}
+.ads img{ width:250px;
+}
+.box_right { width:190px;
+             float:none;
+			 font-size:15px;
+}
+.bl_form input {padding-top: 15px;
+                padding: 5px 15px;
+	            width:190px;
+				
+      }		  
+#cv-sticky{display:none;
+}
+.clayer img{ padding: 5px 15px;
+             width:550px;
+			 background-color:#cccccc;
+			 margin-left:10px;
+}
+#related {width:600px;
+          height:500px;
+          margin-top:20px;
+          padding:15px;
+          background-color:#F6F4F0;
+		  border:none;
+          -moz-border-radius:0px;
+          -webkit-border-radius:0px;
+          -o-border-radius:0px;
+          border-radius:0px;
+          box-shadow:none;
+          float:left;
+          display:block;
+} 
+#recent_post { width:600px;
+            background-color:#ffcfcc;
+            color:#666;  /*#FFF0A5*/
+            -moz-border-radius:10px;
+            -webkit-border-radius:10px;
+            -o-border-radius:10px;
+            border-radius:10px;
+			font-family:'fontin', Arial, Helvetica, sans-serif;
+            font-size:20px;
+			text-align:center;
+			margin-bottom:40px;
+}
+.search_input { width:200px;	  
+}
+.header {
+	background:#666;
+	padding-top:5px;
+	padding-bottom:2px;
+	padding-left:5px;
+	width:936px;
+	margin-left:0px;
+}
+.footer {
+	padding: 10px 0;
+	background:#F6F4F0;
+	position: relative;  /* this gives IE6 hasLayout to properly clear*/
+	clear: both;   /* this clear property forces the .container to understand where the columns end and contain them */
+	 border-radius:10px;
+	-moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -o-border-radius:10px;
+	width:850px;
+}
+}
+@media screen and (max-width:1025px) and (min-width: 991px){
+ .body{
+		width:100%px;
+	}
+.container {
+	width: 970px;
+	margin:0px;
+	}
+.content{ float:left;
+		 width:680px;
+		
+	}
+.sidebar1 {width :660px;
+           height:60px;
+		   margin-top:20px;
+		   margin-left:10px;
+}
+.sidebar1 li{ float:left;
+}
+ul.nav li{ padding:15px 28px 15px 28px;
+}
+.sidebar2 { width:260px;
+            float:left; 
+}
+.storypic img{float: none;
+			 margin-left:0px;
+}
+.box_right { width:190px;
+             float:none;
+			 font-size:15px;
+}
+.bl_form input {padding-top: 15px;
+                padding: 5px 15px;
+	            width:190px;
+ }		  
+#cv-sticky{display:none;
+}
+.ads img{ width:270px;
+}
+.clayer img{ padding: 15px 20px;
+             width:550px;
+			 background-color:#cccccc;
+			 margin-left:18px;
+}
+#related {width:600px;
+          height:500px;
+          margin-top:20px;
+          padding:15px;
+          background-color:#F6F4F0;
+		  border:none;
+          -moz-border-radius:0px;
+          -webkit-border-radius:0px;
+          -o-border-radius:0px;
+          border-radius:0px;
+          box-shadow:none;
+          float:left;
+          display:block;
+} 
+#recent_post { width:600px;
+            background-color:#ffcfcc;
+            color:#666;  /*#FFF0A5*/
+            -moz-border-radius:10px;
+            -webkit-border-radius:10px;
+            -o-border-radius:10px;
+            border-radius:10px;
+			font-family:'fontin', Arial, Helvetica, sans-serif;
+            font-size:20px;
+			text-align:center;
+			margin-bottom:40px;
+}
+.search_input { width:200px;	  
+}
+.header {
+	background:#666;
+	padding-top:5px;
+	padding-bottom:2px;
+	padding-left:5px;
+	width:960px;
+	margin-left:0px;
+}
+.footer {
+	padding: 10px 0;
+	background:#F6F4F0;
+	position: relative;  /* this gives IE6 hasLayout to properly clear*/
+	clear: both;   /* this clear property forces the .container to understand where the columns end and contain them */
+	 border-radius:10px;
+	-moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -o-border-radius:10px;
+	width:850px;
+}
+}
+
+@media screen and (max-width:1080px) and (min-width:1026px){
+ .body{
+		width:100%px;
+	}
+.container {
+	width: 1000px;
+	margin:0px;
+	}
+.content{ float:left;
+		 width:500px;	
+	}
+.sidebar1 {float:left;
+           width :150px;
+		   margin-top:20px;
+		   margin-left:8px;
+}
+.sidebar2 { width:300px;
+            float:left; 
+}
+.storypic img{float: none;
+			 margin-left:0px;
+}
+.box_right { width:300px;
+             float:none;
+			 font-size:15px;
+}
+.bl_form input {padding-top: 15px;
+                padding: 5px 15px;
+	            width:220px;
+ }		  
+#cv-sticky{display:none;
+}
+.ads img{ width:270px;
+}
+.clayer img{ padding: 10px 0px;
+             width:400px;
+			 background-color:#cccccc;
+			 margin-left:25px;
+}
+#related {width:600px;
+          height:500px;
+          margin-top:20px;
+          padding:15px;
+          background-color:#F6F4F0;
+		  border:none;
+          -moz-border-radius:0px;
+          -webkit-border-radius:0px;
+          -o-border-radius:0px;
+          border-radius:0px;
+          box-shadow:none;
+          float:left;
+          display:block;
+} 
+#recent_post { width:600px;
+            background-color:#ffcfcc;
+            color:#666;  /*#FFF0A5*/
+            -moz-border-radius:10px;
+            -webkit-border-radius:10px;
+            -o-border-radius:10px;
+            border-radius:10px;
+			font-family:'fontin', Arial, Helvetica, sans-serif;
+            font-size:20px;
+			text-align:center;
+			margin-bottom:40px;
+}
+.search_input { width:200px;	  
+}
+.header {
+	background:#666;
+	padding-top:5px;
+	padding-bottom:2px;
+	padding-left:5px;
+	width:1000px;
+	margin-left:0px;
+}
+.footer {
+	padding: 10px 0;
+	background:#F6F4F0;
+	position: relative;  /* this gives IE6 hasLayout to properly clear*/
+	clear: both;   /* this clear property forces the .container to understand where the columns end and contain them */
+	 border-radius:10px;
+	-moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -o-border-radius:10px;
+	width:1000px;
+}
+}
+@media screen and (max-width:1120px) and (min-width:1081px){
+ .body{
+		width:100%px;
+	}
+.container {
+	width: 1060px;
+	margin:0px;
+	}
+.content{ float:left;
+		 width:550px;	
+	}
+.sidebar1 {float:left;
+           width :160px;
+		   margin-top:20px;
+		   margin-left:8px;
+}
+.sidebar2 { width:300px;
+            float:left; 
+}
+.box_right { width:300px;
+             float:none;
+			 font-size:15px;
+}
+.bl_form input {padding-top: 15px;
+                padding: 5px 15px;
+	            width:220px;
+ }		  
+#cv-sticky{display:none;
+}
+.ads img{ width:270px;
+}
+.clayer img{ padding: 15px 0px;
+             width:450px;
+			 background-color:#cccccc;
+			 margin-left:25px;
+}
+#related {width:600px;
+          height:500px;
+          margin-top:20px;
+          padding:15px;
+          background-color:#F6F4F0;
+		  border:none;
+          -moz-border-radius:0px;
+          -webkit-border-radius:0px;
+          -o-border-radius:0px;
+          border-radius:0px;
+          box-shadow:none;
+          float:left;
+          display:block;
+} 
+#recent_post { width:600px;
+            background-color:#ffcfcc;
+            color:#666;  /*#FFF0A5*/
+            -moz-border-radius:10px;
+            -webkit-border-radius:10px;
+            -o-border-radius:10px;
+            border-radius:10px;
+			font-family:'fontin', Arial, Helvetica, sans-serif;
+            font-size:20px;
+			text-align:center;
+			margin-bottom:40px;
+}
+.search_input { width:200px;	  
+}
+.header {
+	background:#666;
+	padding-top:5px;
+	padding-bottom:2px;
+	padding-left:5px;
+	width:1050px;
+	margin-left:0px;
+}
+.footer {
+	padding: 10px 0;
+	background:#F6F4F0;
+	position: relative;  /* this gives IE6 hasLayout to properly clear*/
+	clear: both;   /* this clear property forces the .container to understand where the columns end and contain them */
+	 border-radius:10px;
+	-moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -o-border-radius:10px;
+	width:1050px;
+}
+}
+
+@media screen and (max-width:1150px) and (min-width:1121px){
+ .body{
+		width:100%px;
+	}
+.container {
+	width: 1100px;
+	margin:0px;
+	}
+.content{ float:left;
+		 width:565px;	
+	}
+.sidebar1 {float:left;
+           width :162px;
+		   margin-top:20px;
+		   margin-left:8px;
+}
+.sidebar2 { width:330px;
+            float:left; 
+}
+.box_right { width:300px;
+             float:none;
+			 font-size:15px;
+}
+.bl_form input {padding-top: 15px;
+                padding: 5px 15px;
+	            width:220px;
+ }		  
+.ads img{ width:270px;
+}
+.clayer img{ padding: 15px 10px;
+             width:470px;
+			 background-color:#cccccc;
+			 margin-left:15px;
+}
+#related {width:600px;
+          height:500px;
+          margin-top:20px;
+          padding:15px;
+          background-color:#F6F4F0;
+		  border:none;
+          -moz-border-radius:0px;
+          -webkit-border-radius:0px;
+          -o-border-radius:0px;
+          border-radius:0px;
+          box-shadow:none;
+          float:left;
+          display:block;
+} 
+#recent_post { width:600px;
+            background-color:#ffcfcc;
+            color:#666;  /*#FFF0A5*/
+            -moz-border-radius:10px;
+            -webkit-border-radius:10px;
+            -o-border-radius:10px;
+            border-radius:10px;
+			font-family:'fontin', Arial, Helvetica, sans-serif;
+            font-size:20px;
+			text-align:center;
+			margin-bottom:40px;
+}
+.search_input { width:200px;	  
+}
+.header {
+	background:#666;
+	padding-top:5px;
+	padding-bottom:2px;
+	padding-left:5px;
+	width:1090px;
+	margin-left:0px;
+}
+.footer {
+	padding: 10px 0;
+	background:#F6F4F0;
+	position: relative;  /* this gives IE6 hasLayout to properly clear*/
+	clear: both;   /* this clear property forces the .container to understand where the columns end and contain them */
+	 border-radius:10px;
+	-moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -o-border-radius:10px;
+	width:1090px;
+}
+}
+
+@media screen and (max-width:1200px) and (min-width:1151px){
+ .body{
+		width:100%px;
+	}
+.container {
+	width: 1130px;
+	margin:0px;
+	}
+.content{ float:left;
+		 width:565px;	
+	}
+.sidebar1 {float:left;
+           width :180px;
+		   margin-top:20px;
+		   margin-left:8px;
+}
+.sidebar2 { width:330px;
+            float:left; 
+}
+.box_right { width:320px;
+             float:none;
+			 font-size:15px;
+}
+.bl_form input {padding-top: 15px;
+                padding: 5px 15px;
+	            width:220px;
+ }		  
+.clayer img{ padding: 15px 10px;
+             width:480px;
+			 background-color:#cccccc;
+			 margin-left:10px;
+}
+#related {width:600px;
+          height:500px;
+          margin-top:20px;
+          padding:15px;
+          background-color:#F6F4F0;
+		  border:none;
+          -moz-border-radius:0px;
+          -webkit-border-radius:0px;
+          -o-border-radius:0px;
+          border-radius:0px;
+          box-shadow:none;
+          float:left;
+          display:block;
+} 
+#recent_post { width:600px;
+            background-color:#ffcfcc;
+            color:#666;  /*#FFF0A5*/
+            -moz-border-radius:10px;
+            -webkit-border-radius:10px;
+            -o-border-radius:10px;
+            border-radius:10px;
+			font-family:'fontin', Arial, Helvetica, sans-serif;
+            font-size:20px;
+			text-align:center;
+			margin-bottom:40px;
+}
+.search_input { width:220px;	  
+}
+.header {
+	background:#666;
+	padding-top:5px;
+	padding-bottom:2px;
+	padding-left:5px;
+	width:1125px;
+	margin-left:0px;
+}
+.footer {
+	padding: 10px 0;
+	background:#F6F4F0;
+	position: relative;  /* this gives IE6 hasLayout to properly clear*/
+	clear: both;   /* this clear property forces the .container to understand where the columns end and contain them */
+	 border-radius:10px;
+	-moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -o-border-radius:10px;
+	width:1100px;
+}
+}
+@media screen and (max-width:1230px) and (min-width:1201px){
+ .body{
+		width:100%px;
+	}
+.container {
+	width: 1180px;
+	margin:0px;
+	}
+.content{ float:left;
+		 width:580px;	
+	}
+.sidebar1 {float:left;
+           width :200px;
+		   margin-top:20px;
+		   margin-left:8px;
+}
+.sidebar2 { width:352px;
+            float:left;
+}
+.box_right { width:320px;
+             float:none;
+			 font-size:15px;
+}
+.bl_form input {padding-top: 15px;
+                padding: 5px 15px;
+	            width:220px;
+ }		  
+.clayer img{ padding: 15px 10px;
+             width:495px;
+			 background-color:#cccccc;
+			 margin-left:10px;
+}
+#related {width:600px;
+          height:500px;
+          margin-top:20px;
+          padding:15px;
+          background-color:#F6F4F0;
+		  border:none;
+          -moz-border-radius:0px;
+          -webkit-border-radius:0px;
+          -o-border-radius:0px;
+          border-radius:0px;
+          box-shadow:none;
+          float:left;
+          display:block;
+} 
+#recent_post { width:600px;
+            background-color:#ffcfcc;
+            color:#666;  /*#FFF0A5*/
+            -moz-border-radius:10px;
+            -webkit-border-radius:10px;
+            -o-border-radius:10px;
+            border-radius:10px;
+			font-family:'fontin', Arial, Helvetica, sans-serif;
+            font-size:20px;
+			text-align:center;
+			margin-bottom:40px;
+}
+.search_input { width:220px;	  
+}
+.header {
+	background:#666;
+	padding-top:5px;
+	padding-bottom:2px;
+	padding-left:5px;
+	width:1175px;
+	margin-left:0px;
+}
+.footer {
+	padding: 10px 0;
+	background:#F6F4F0;
+	position: relative;  /* this gives IE6 hasLayout to properly clear*/
+	clear: both;   /* this clear property forces the .container to understand where the columns end and contain them */
+	 border-radius:10px;
+	-moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -o-border-radius:10px;
+	width:1150px;
+}
+}
+
+@media screen and (max-width:1245px) and (min-width:1231px){
+ .body{
+		width:100%px;
+	}
+.container {
+	width: 1210px;
+	margin:0px;
+	}
+.content{ float:left;
+		 width:600px;	
+	}
+.sidebar1 {float:left;
+           width :200px;
+		   margin-top:20px;
+		   margin-left:8px;
+}
+.sidebar2 { width:358px;
+            float:left;
+}
+.box_right { width:320px;
+             float:none;
+			 font-size:15px;
+			 margin-left:2px; 
+}
+.bl_form input {padding-top: 15px;
+                padding: 5px 15px;
+	            width:220px;
+ }		  
+.clayer img{ padding: 15px 15px;
+             width:500px;
+			 background-color:#cccccc;
+			 margin-left:10px;
+}
+#related {width:600px;
+          height:500px;
+          margin-top:20px;
+          padding:15px;
+          background-color:#F6F4F0;
+		  border:none;
+          -moz-border-radius:0px;
+          -webkit-border-radius:0px;
+          -o-border-radius:0px;
+          border-radius:0px;
+          box-shadow:none;
+          float:left;
+          display:block;
+} 
+#recent_post { width:600px;
+            background-color:#ffcfcc;
+            color:#666;  /*#FFF0A5*/
+            -moz-border-radius:10px;
+            -webkit-border-radius:10px;
+            -o-border-radius:10px;
+            border-radius:10px;
+			font-family:'fontin', Arial, Helvetica, sans-serif;
+            font-size:20px;
+			text-align:center;
+			margin-bottom:40px;
+}
+.search_input { width:220px;
+}
+.header {
+	background:#666;
+	padding-top:5px;
+	padding-bottom:2px;
+	padding-left:5px;
+	width:1200px;
+	margin-left:0px;
+}
+.footer {
+	padding: 10px 0;
+	background:#F6F4F0;
+	position: relative;  /* this gives IE6 hasLayout to properly clear*/
+	clear: both;   /* this clear property forces the .container to understand where the columns end and contain them */
+	 border-radius:10px;
+	-moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -o-border-radius:10px;
+	width:1200px;
+}
+}
+@media screen and (max-width:1260px) and (min-width:1246px){
+ .body{
+		width:100%px;
+	}
+.container {
+	width: 1225px;
+	margin:0px;
+	}
+.content{ float:left;
+		 width:650px;	
+	}
+.sidebar1 {float:left;
+           width :200px;
+		   margin-top:20px;
+		   margin-left:8px;
+}
+.sidebar2 { width:320px;
+            float:left;
+}
+.box_right { width:320px;
+             float:none;
+			 font-size:15px;
+			 margin-left:2px; 
+}
+.bl_form input {padding-top: 15px;
+                padding: 5px 15px;
+	            width:220px;
+ }		
+.clayer img{ padding: 15px 15px;
+             width:560px;
+			 background-color:#cccccc;
+			 margin-left:8px;
+}
+#related {width:600px;
+          height:500px;
+          margin-top:20px;
+          padding:15px;
+          background-color:#F6F4F0;
+		  border:none;
+          -moz-border-radius:0px;
+          -webkit-border-radius:0px;
+          -o-border-radius:0px;
+          border-radius:0px;
+          box-shadow:none;
+          float:left;
+          display:block;
+} 
+#recent_post { width:600px;
+            background-color:#ffcfcc;
+            color:#666;  /*#FFF0A5*/
+            -moz-border-radius:10px;
+            -webkit-border-radius:10px;
+            -o-border-radius:10px;
+            border-radius:10px;
+			font-family:'fontin', Arial, Helvetica, sans-serif;
+            font-size:20px;
+			text-align:center;
+			margin-bottom:40px;
+}
+.search_input { width:220px;
+}
+.header {
+	background:#666;
+	padding-top:5px;
+	padding-bottom:2px;
+	padding-left:5px;
+	width:1220px;
+	margin-left:0px;
+}
+.footer {
+	padding: 10px 0;
+	background:#F6F4F0;
+	position: relative;  /* this gives IE6 hasLayout to properly clear*/
+	clear: both;   /* this clear property forces the .container to understand where the columns end and contain them */
+	 border-radius:10px;
+	-moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -o-border-radius:10px;
+	width:1210px;
+}
+}
+
+/*
+@media print{
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5){
+}*/

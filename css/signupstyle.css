@@ -1,0 +1,120 @@
+@charset "utf-8";
+/* CSS Document */
+#userform  {
+margin: 30px 72px 0 72px;
+background: -webkit-gradient(linear, bottom, left 175px, from(#CCCCCC), to(#EEEEEE));
+background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+background: linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+position:relative;
+width:550px;
+height:450px;
+font-family: Tahoma, Geneva, sans-serif;
+font-size: 14px;
+line-height: 24px;
+font-weight: bold;
+color: #f58220;
+text-decoration: none;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+padding:10px;
+border: 1px solid #ccc;
+-webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+-moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+.note{ color:#F30;
+            font-style: italic;
+}
+#newuser { color:#00909E;
+           font-style:normal;
+	}
+.errors2{ color:#F00;
+	}
+.message{ color:#F00;
+	}
+			
+#caption{ text-align:center; 
+          color:#C30075;
+}
+.f_input{
+background: url('../images/input.png') no-repeat;	
+width:310px;
+display:block;
+height: 30px;
+font-size: 15px;
+border-radius:5px;
+-moz-border-radius:5px;
+-webkit-border-radius:5px;
+-o-border-radius:5px;
+line-height:1.428571429;
+color:#555;
+vertical-align:middle;
+background-color:#fff;
+border:1px solid #ccc;
+/*-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,0.075);
+-moz-box-shadow:inset 0 1px 1px rgba(0,0,0,0.075);
+box-shadow:inset 0 1px 1px rgba(0,0,0,0.075);
+-webkit-transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+-moz-transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;*/
+padding: 2px 15px 2px 15px;
+/*-webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+-moz-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+-moz-box-shadow:inset 0 1px 4px rgba(0,0,0,0.125);
+-webkit-box-shadow:inset 0 1px 4px rgba(0,0,0,0.125);
+box-shadow:inset 0 1px 4px rgba(0,0,0,0.125);*/
+}
+.f_input:focus{
+border-color:#66afe9;
+outline:0;/*Used to stop google chrome from adding its own border color*/
+-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(102,175,233,0.6);
+box-shadow:inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(102,175,233,0.6);
+-moz-box-shadow:inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(102,175,233,0.6);
+/*
+border:1px solid #D4D4D4;
+-moz-box-shadow: 1px 1px 5px #6FF;/*#777
+-webkit-box-shadow: 1px 1px 5px #6FF;
+box-shadow: 1px 1px 5px #6FF;
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;*/
+}
+.pix_input{
+width:220px;
+display:block;
+border: 1px solid #999;
+height: 25px;
+}
+
+.sign-up {
+width:120px;
+height:60px;	
+position: relative;
+font-size: 15px;
+line-height: 1;
+padding: 5px 8px 8px 8px;
+border-top-width: 1px;
+border-style: solid;
+display: inline-block;
+font-weight: bold;
+-moz-border-radius: 15px;
+-webkit-border-radius: 15px;
+border-radius: 15px;
+-webkit-box-shadow: 0 0 5px rgba(0,0,0,0.3);
+-moz-box-shadow: 0 0 5px rgba(0,0,0,0.3);
+box-shadow:  0 0 5px rgba(0,0,0,0.3);	
+position:absolute;
+background:#09C;
+color:#fff;
+margin-top:20px;
+margin-left:300px;
+font-family: Tahoma, Geneva, sans-serif;
+height:30px;
+border: 1px solid #999;
+}
+/*.sign-up {
+background:#fff;
+color:#09C;
+}*/
